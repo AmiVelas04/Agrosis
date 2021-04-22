@@ -1,4 +1,4 @@
-﻿namespace Central.Reportes
+﻿namespace Agrosis.Reportes
 {
     partial class Ganancia
     {
@@ -34,7 +34,7 @@
             // RpvGan
             // 
             this.RpvGan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RpvGan.LocalReport.ReportEmbeddedResource = "Central.Reportes.Ganancia.rdlc";
+            this.RpvGan.LocalReport.ReportEmbeddedResource = "Agrosis.Reportes.Ganancia.rdlc";
             this.RpvGan.Location = new System.Drawing.Point(0, 0);
             this.RpvGan.Name = "RpvGan";
             this.RpvGan.Size = new System.Drawing.Size(284, 261);

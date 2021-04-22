@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 using System.Drawing.Printing;
 
 
-namespace Central.Formularios
+namespace Agrosis.Formularios
 {
     public partial class Caja : Form
     {

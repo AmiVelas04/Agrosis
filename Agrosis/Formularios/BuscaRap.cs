@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Central.Formularios
+namespace Agrosis.Formularios
 {
     public partial class BuscaRap : Form
     {

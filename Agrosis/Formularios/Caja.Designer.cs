@@ -1,4 +1,4 @@
-﻿namespace Central.Formularios
+﻿namespace Agrosis.Formularios
 {
     partial class Caja
     {
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanSup = new System.Windows.Forms.Panel();
+            this.BtnAbrir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.TxtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.DtpFecha = new System.Windows.Forms.DateTimePicker();
             this.PanInf = new System.Windows.Forms.Panel();
             this.DgvOpe = new System.Windows.Forms.DataGridView();
-            this.BtnAbrir = new System.Windows.Forms.Button();
             this.PanSup.SuspendLayout();
             this.PanInf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvOpe)).BeginInit();
@@ -79,8 +79,18 @@
             this.PanSup.Location = new System.Drawing.Point(0, 0);
             this.PanSup.Margin = new System.Windows.Forms.Padding(4);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(832, 226);
+            this.PanSup.Size = new System.Drawing.Size(1235, 226);
             this.PanSup.TabIndex = 0;
+            // 
+            // BtnAbrir
+            // 
+            this.BtnAbrir.Location = new System.Drawing.Point(468, 172);
+            this.BtnAbrir.Name = "BtnAbrir";
+            this.BtnAbrir.Size = new System.Drawing.Size(75, 47);
+            this.BtnAbrir.TabIndex = 17;
+            this.BtnAbrir.Text = "Abrir Caja";
+            this.BtnAbrir.UseVisualStyleBackColor = true;
+            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
             // 
             // button1
             // 
@@ -250,7 +260,7 @@
             this.PanInf.Location = new System.Drawing.Point(0, 226);
             this.PanInf.Margin = new System.Windows.Forms.Padding(4);
             this.PanInf.Name = "PanInf";
-            this.PanInf.Size = new System.Drawing.Size(832, 192);
+            this.PanInf.Size = new System.Drawing.Size(1235, 476);
             this.PanInf.TabIndex = 1;
             // 
             // DgvOpe
@@ -268,24 +278,15 @@
             this.DgvOpe.ReadOnly = true;
             this.DgvOpe.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.DgvOpe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvOpe.Size = new System.Drawing.Size(832, 192);
+            this.DgvOpe.Size = new System.Drawing.Size(1235, 476);
             this.DgvOpe.TabIndex = 0;
-            // 
-            // BtnAbrir
-            // 
-            this.BtnAbrir.Location = new System.Drawing.Point(468, 172);
-            this.BtnAbrir.Name = "BtnAbrir";
-            this.BtnAbrir.Size = new System.Drawing.Size(75, 47);
-            this.BtnAbrir.TabIndex = 17;
-            this.BtnAbrir.Text = "Abrir Caja";
-            this.BtnAbrir.UseVisualStyleBackColor = true;
-            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
             // 
             // Caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 418);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(154)))));
+            this.ClientSize = new System.Drawing.Size(1235, 702);
             this.Controls.Add(this.PanInf);
             this.Controls.Add(this.PanSup);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

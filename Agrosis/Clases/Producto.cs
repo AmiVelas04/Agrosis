@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
 
-namespace Central.Clases
+namespace Agrosis.Clases
 {
     
     class Producto
@@ -69,8 +69,8 @@ namespace Central.Clases
         public bool agregprod(string[] datos)
         {
             string consulta;
-            consulta = "Insert into producto (id_prod,nombre, descripcion,marca,precio_c,precio_v,cantidad,fecha_cad,pack,p_pack) "+
-                "Values('"+datos [0] + "','"+ datos[1] + "','"+ datos[2] + "','"+ datos[3] + "'," + datos[4] + ","+ datos[5] + "," + datos[6] + ",'" + datos[7] +"',"+datos[8]+","+datos [9]+")";
+            consulta = "Insert into producto (id_prod,nombre, descripcion,marca,precio_c,precio_m1,precio_m2,precio_v1,precio_v2,cantidad,fecha_cad) " +
+                "Values('"+datos [0] + "','"+ datos[1] + "','"+ datos[2] + "','"+ datos[3] + "'," + datos[4] + ","+ datos[5] + "," + datos[6] + "," + datos[7] +","+datos[8]+ "," + datos[9]+",'" +datos [10]+"')";
             return consulta_gen(consulta);
 
         }
@@ -78,8 +78,8 @@ namespace Central.Clases
         public bool actualprod(string[] datos)
         {
             string consulta;
-            consulta = "Update producto set nombre='"+ datos[1] + "', descripcion ='"+ datos[2] + "',marca ='"+datos[3] +"',precio_c=" + datos[4] + ",precio_v="+ datos[5] + ",cantidad="+ datos[6] + ",fecha_cad= '" + datos[7] + "',pack="+datos[8]+", p_pack="+datos[9] + 
-                " Where id_prod='" + datos[0] + "'";
+            consulta = "Update producto set nombre='"+ datos[1] + "', descripcion ='"+ datos[2] + "',marca ='"+datos[3] +"',precio_c=" + datos[4] + ",precio_m1="+ datos[5] + ",precio_m2="+ datos[6] + ",precio_v1= " + datos[7] + ",precio_v2="+datos[8]+", cantidad="+datos[9]+", fecha_cad='"+datos[10] + 
+                "' Where id_prod='" + datos[0] + "'";
             return consulta_gen(consulta);
 
         }
@@ -87,7 +87,7 @@ namespace Central.Clases
         public DataTable buscarprod(string cod)
         {
             string consulta;
-            consulta = "Select Nombre,Descripcion,Marca,precio_c as Costo,precio_v as Venta,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad, pack as Paquete,p_pack as PrecioxPaquete "+
+            consulta = "Select Nombre,Descripcion,Marca,precio_c as Costo,precio_v1 as Venta1,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad, pack as Paquete,p_pack as PrecioxPaquete,precio_v2 as Venta2,precio_m1 as M1,precio_M2 as m2  " +
                 "from producto where id_prod='" + cod + "'";
             return buscar(consulta);
         }
@@ -252,7 +252,6 @@ namespace Central.Clases
                 return false;
             }
         }
-
         
 
         public int cantidadcaduca()
@@ -305,7 +304,7 @@ namespace Central.Clases
             }
         }
        
-             public DataTable BuscaRapProd(string nom)
+        public DataTable BuscaRapProd(string nom)
         {
             string consulta;
             consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_v as Precio,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad, pack as Paquete,p_pack as PrecioxPaquete " +
@@ -313,8 +312,9 @@ namespace Central.Clases
                         "where nombre like'%" + nom + "%' or marca like '%" + nom + "%' or descripcion like '%" + nom + "%'";
             return buscar(consulta);
         }
-    
 
+       
+        
        
     }
 }

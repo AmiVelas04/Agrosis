@@ -1,4 +1,4 @@
-﻿namespace Central.Formularios
+﻿namespace Agrosis.Formularios
 {
     partial class Login
     {
@@ -44,7 +44,7 @@
             this.BtnIniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(184)))), ((int)(((byte)(186)))));
             this.BtnIniciar.FlatAppearance.BorderSize = 0;
             this.BtnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIniciar.Location = new System.Drawing.Point(53, 183);
+            this.BtnIniciar.Location = new System.Drawing.Point(58, 183);
             this.BtnIniciar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIniciar.Name = "BtnIniciar";
             this.BtnIniciar.Size = new System.Drawing.Size(129, 38);
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(37)))), ((int)(((byte)(75)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(157)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(236, 231);
             this.Controls.Add(this.TxtPass);
             this.Controls.Add(this.label2);

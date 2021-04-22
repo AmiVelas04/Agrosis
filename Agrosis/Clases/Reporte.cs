@@ -7,7 +7,7 @@ using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace Central.Clases
+namespace Agrosis.Clases
 {
     class Reporte
     {

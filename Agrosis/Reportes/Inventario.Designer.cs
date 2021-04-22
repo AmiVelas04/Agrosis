@@ -1,4 +1,4 @@
-﻿namespace Central.Reportes
+﻿namespace Agrosis.Reportes
 {
     partial class Inventario
     {
@@ -34,7 +34,7 @@
             // RpwInv
             // 
             this.RpwInv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RpwInv.LocalReport.ReportEmbeddedResource = "Central.Reportes.Inventario.rdlc";
+            this.RpwInv.LocalReport.ReportEmbeddedResource = "Agrosis.Reportes.Inventario.rdlc";
             this.RpwInv.Location = new System.Drawing.Point(0, 0);
             this.RpwInv.Name = "RpwInv";
             this.RpwInv.Size = new System.Drawing.Size(876, 261);

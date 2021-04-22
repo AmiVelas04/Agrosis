@@ -1,4 +1,4 @@
-﻿namespace Central
+﻿namespace Agrosis
 {
     partial class Form1
     {

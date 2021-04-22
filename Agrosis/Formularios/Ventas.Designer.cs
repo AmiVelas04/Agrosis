@@ -1,4 +1,4 @@
-﻿namespace Central.Formularios
+﻿namespace Agrosis.Formularios
 {
     partial class Ventas
     {
@@ -37,7 +37,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.LblTotal = new System.Windows.Forms.Label();
             this.BtnBorrar = new System.Windows.Forms.Button();
-            this.BtnAgreg = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.NudCant = new System.Windows.Forms.NumericUpDown();
             this.TxtPrecio = new System.Windows.Forms.TextBox();
@@ -62,6 +61,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.DgvProd = new System.Windows.Forms.DataGridView();
             this.Ttinfo = new System.Windows.Forms.ToolTip(this.components);
+            this.ChkCprecio = new System.Windows.Forms.CheckBox();
+            this.CboPrecio = new System.Windows.Forms.ComboBox();
             this.PanSup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudCant)).BeginInit();
             this.PanLat.SuspendLayout();
@@ -72,12 +73,13 @@
             // PanSup
             // 
             this.PanSup.BackColor = System.Drawing.Color.Transparent;
+            this.PanSup.Controls.Add(this.CboPrecio);
+            this.PanSup.Controls.Add(this.ChkCprecio);
             this.PanSup.Controls.Add(this.CboNom);
             this.PanSup.Controls.Add(this.TxtTotal);
             this.PanSup.Controls.Add(this.label7);
             this.PanSup.Controls.Add(this.LblTotal);
             this.PanSup.Controls.Add(this.BtnBorrar);
-            this.PanSup.Controls.Add(this.BtnAgreg);
             this.PanSup.Controls.Add(this.label6);
             this.PanSup.Controls.Add(this.NudCant);
             this.PanSup.Controls.Add(this.TxtPrecio);
@@ -93,7 +95,7 @@
             this.PanSup.Location = new System.Drawing.Point(0, 0);
             this.PanSup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(869, 133);
+            this.PanSup.Size = new System.Drawing.Size(1184, 133);
             this.PanSup.TabIndex = 0;
             // 
             // CboNom
@@ -113,7 +115,7 @@
             // 
             this.TxtTotal.Enabled = false;
             this.TxtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotal.Location = new System.Drawing.Point(653, 65);
+            this.TxtTotal.Location = new System.Drawing.Point(952, 69);
             this.TxtTotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtTotal.Name = "TxtTotal";
             this.TxtTotal.Size = new System.Drawing.Size(205, 49);
@@ -124,7 +126,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(670, 24);
+            this.label7.Location = new System.Drawing.Point(969, 28);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 24);
@@ -135,7 +137,7 @@
             // 
             this.LblTotal.AutoSize = true;
             this.LblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotal.Location = new System.Drawing.Point(732, 90);
+            this.LblTotal.Location = new System.Drawing.Point(1031, 94);
             this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(65, 25);
@@ -145,25 +147,16 @@
             // 
             // BtnBorrar
             // 
-            this.BtnBorrar.Location = new System.Drawing.Point(533, 5);
+            this.BtnBorrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBorrar.Location = new System.Drawing.Point(826, 14);
             this.BtnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnBorrar.Name = "BtnBorrar";
             this.BtnBorrar.Size = new System.Drawing.Size(112, 63);
             this.BtnBorrar.TabIndex = 13;
             this.BtnBorrar.Text = "Borrar Producto";
+            this.BtnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnBorrar.UseVisualStyleBackColor = true;
             this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
-            // 
-            // BtnAgreg
-            // 
-            this.BtnAgreg.Location = new System.Drawing.Point(657, 5);
-            this.BtnAgreg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnAgreg.Name = "BtnAgreg";
-            this.BtnAgreg.Size = new System.Drawing.Size(34, 24);
-            this.BtnAgreg.TabIndex = 12;
-            this.BtnAgreg.Text = "Agregar Producto";
-            this.BtnAgreg.UseVisualStyleBackColor = true;
-            this.BtnAgreg.Visible = false;
             // 
             // label6
             // 
@@ -193,16 +186,16 @@
             // TxtPrecio
             // 
             this.TxtPrecio.Enabled = false;
-            this.TxtPrecio.Location = new System.Drawing.Point(440, 29);
+            this.TxtPrecio.Location = new System.Drawing.Point(468, 29);
             this.TxtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPrecio.Name = "TxtPrecio";
-            this.TxtPrecio.Size = new System.Drawing.Size(85, 27);
+            this.TxtPrecio.Size = new System.Drawing.Size(107, 27);
             this.TxtPrecio.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(447, 8);
+            this.label5.Location = new System.Drawing.Point(475, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 20);
@@ -289,10 +282,10 @@
             this.PanLat.Controls.Add(this.BtnCancelar);
             this.PanLat.Controls.Add(this.BtnCobrar);
             this.PanLat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanLat.Location = new System.Drawing.Point(637, 133);
+            this.PanLat.Location = new System.Drawing.Point(952, 133);
             this.PanLat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanLat.Name = "PanLat";
-            this.PanLat.Size = new System.Drawing.Size(232, 401);
+            this.PanLat.Size = new System.Drawing.Size(232, 569);
             this.PanLat.TabIndex = 1;
             // 
             // LblDesc
@@ -368,7 +361,6 @@
             this.TxtEfect.Size = new System.Drawing.Size(205, 49);
             this.TxtEfect.TabIndex = 2;
             this.TxtEfect.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TxtEfect.TextChanged += new System.EventHandler(this.TxtEfect_TextChanged);
             this.TxtEfect.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEfect_KeyDown);
             // 
             // BtnCancelar
@@ -404,11 +396,11 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.DgvProd);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 133);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 254);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(637, 401);
+            this.panel3.Size = new System.Drawing.Size(952, 448);
             this.panel3.TabIndex = 2;
             // 
             // DgvProd
@@ -434,16 +426,35 @@
             this.DgvProd.ShowCellToolTips = false;
             this.DgvProd.ShowEditingIcon = false;
             this.DgvProd.ShowRowErrors = false;
-            this.DgvProd.Size = new System.Drawing.Size(637, 401);
+            this.DgvProd.Size = new System.Drawing.Size(952, 448);
             this.DgvProd.TabIndex = 0;
             this.DgvProd.Click += new System.EventHandler(this.DgvProd_Click);
+            // 
+            // ChkCprecio
+            // 
+            this.ChkCprecio.AutoSize = true;
+            this.ChkCprecio.Location = new System.Drawing.Point(667, 70);
+            this.ChkCprecio.Name = "ChkCprecio";
+            this.ChkCprecio.Size = new System.Drawing.Size(110, 24);
+            this.ChkCprecio.TabIndex = 18;
+            this.ChkCprecio.Text = "Precio Libre";
+            this.ChkCprecio.UseVisualStyleBackColor = true;
+            // 
+            // CboPrecio
+            // 
+            this.CboPrecio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboPrecio.FormattingEnabled = true;
+            this.CboPrecio.Location = new System.Drawing.Point(603, 27);
+            this.CboPrecio.Name = "CboPrecio";
+            this.CboPrecio.Size = new System.Drawing.Size(174, 28);
+            this.CboPrecio.TabIndex = 19;
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(869, 534);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(154)))));
+            this.ClientSize = new System.Drawing.Size(1184, 702);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.PanLat);
             this.Controls.Add(this.PanSup);
@@ -470,7 +481,6 @@
 
         private System.Windows.Forms.Panel PanSup;
         private System.Windows.Forms.Button BtnBorrar;
-        private System.Windows.Forms.Button BtnAgreg;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown NudCant;
         private System.Windows.Forms.TextBox TxtPrecio;
@@ -499,5 +509,7 @@
         private System.Windows.Forms.ToolTip Ttinfo;
         private System.Windows.Forms.Label LblDesc;
         private System.Windows.Forms.ComboBox CboNom;
+        private System.Windows.Forms.CheckBox ChkCprecio;
+        private System.Windows.Forms.ComboBox CboPrecio;
     }
 }

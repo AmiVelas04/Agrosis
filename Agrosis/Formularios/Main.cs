@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-namespace Central.Formularios
+namespace Agrosis.Formularios
 {
     public partial class Main : Form
     {
@@ -111,6 +111,11 @@ namespace Central.Formularios
         {
             GenCod codi = new GenCod();
             codi.ShowDialog();
+        }
+
+        private void BtnCompra_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Compra());
         }
     }
 }

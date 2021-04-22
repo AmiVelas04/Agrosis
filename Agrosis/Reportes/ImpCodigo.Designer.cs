@@ -1,4 +1,4 @@
-﻿namespace Central.Reportes
+﻿namespace Agrosis.Reportes
 {
     partial class ImpCodigo
     {
@@ -34,7 +34,7 @@
             // Rpv1
             // 
             this.Rpv1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Rpv1.LocalReport.ReportEmbeddedResource = "Central.Reportes.ImpCodigo.rdlc";
+            this.Rpv1.LocalReport.ReportEmbeddedResource = "Agrosis.Reportes.ImpCodigo.rdlc";
             this.Rpv1.Location = new System.Drawing.Point(0, 0);
             this.Rpv1.Name = "Rpv1";
             this.Rpv1.Size = new System.Drawing.Size(920, 261);

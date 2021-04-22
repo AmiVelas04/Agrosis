@@ -1,4 +1,4 @@
-﻿namespace Central.Reportes
+﻿namespace Agrosis.Reportes
 {
     partial class Masven
     {
@@ -53,7 +53,7 @@
             this.Rpv1.LocalReport.DataSources.Add(reportDataSource1);
             this.Rpv1.LocalReport.DataSources.Add(reportDataSource2);
             this.Rpv1.LocalReport.DataSources.Add(reportDataSource3);
-            this.Rpv1.LocalReport.ReportEmbeddedResource = "Central.Reportes.Masven.rdlc";
+            this.Rpv1.LocalReport.ReportEmbeddedResource = "Agrosis.Reportes.Masven.rdlc";
             this.Rpv1.Location = new System.Drawing.Point(0, 0);
             this.Rpv1.Name = "Rpv1";
             this.Rpv1.Size = new System.Drawing.Size(903, 336);
@@ -61,15 +61,15 @@
             // 
             // DiarioEncBindingSource
             // 
-            this.DiarioEncBindingSource.DataSource = typeof(Central.Reportes.DiarioEnc);
+            this.DiarioEncBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioEnc);
             // 
             // DiezmasBindingSource
             // 
-            this.DiezmasBindingSource.DataSource = typeof(Central.Reportes.Diezmas);
+            this.DiezmasBindingSource.DataSource = typeof(Agrosis.Reportes.Diezmas);
             // 
             // DiarioDetBindingSource
             // 
-            this.DiarioDetBindingSource.DataSource = typeof(Central.Reportes.DiarioDet);
+            this.DiarioDetBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioDet);
             // 
             // Masven
             // 

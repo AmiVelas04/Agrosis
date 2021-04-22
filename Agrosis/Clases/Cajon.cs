@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 
-namespace Central.Clases { 
+namespace Agrosis.Clases { 
     //Esta es la clase para crear el ticket de venta. Crearemos varios métodos aquí.
     public class Cajon
     {

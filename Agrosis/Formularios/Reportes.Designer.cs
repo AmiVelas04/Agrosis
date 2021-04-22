@@ -1,4 +1,4 @@
-﻿namespace Central.Formularios
+﻿namespace Agrosis.Formularios
 {
     partial class Reportes
     {
@@ -72,7 +72,7 @@
             this.PanSup.Location = new System.Drawing.Point(0, 0);
             this.PanSup.Margin = new System.Windows.Forms.Padding(4);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(832, 229);
+            this.PanSup.Size = new System.Drawing.Size(1235, 229);
             this.PanSup.TabIndex = 0;
             // 
             // PanSder
@@ -82,7 +82,7 @@
             this.PanSder.Location = new System.Drawing.Point(430, 0);
             this.PanSder.Margin = new System.Windows.Forms.Padding(4);
             this.PanSder.Name = "PanSder";
-            this.PanSder.Size = new System.Drawing.Size(402, 229);
+            this.PanSder.Size = new System.Drawing.Size(805, 229);
             this.PanSder.TabIndex = 1;
             // 
             // GbxSemanal
@@ -97,7 +97,7 @@
             this.GbxSemanal.Margin = new System.Windows.Forms.Padding(4);
             this.GbxSemanal.Name = "GbxSemanal";
             this.GbxSemanal.Padding = new System.Windows.Forms.Padding(4);
-            this.GbxSemanal.Size = new System.Drawing.Size(402, 229);
+            this.GbxSemanal.Size = new System.Drawing.Size(805, 229);
             this.GbxSemanal.TabIndex = 0;
             this.GbxSemanal.TabStop = false;
             this.GbxSemanal.Text = "Reporte de Totales";
@@ -212,7 +212,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 229);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 200);
+            this.panel1.Size = new System.Drawing.Size(430, 473);
             this.panel1.TabIndex = 1;
             // 
             // Gbxproductos
@@ -221,7 +221,7 @@
             this.Gbxproductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Gbxproductos.Location = new System.Drawing.Point(0, 0);
             this.Gbxproductos.Name = "Gbxproductos";
-            this.Gbxproductos.Size = new System.Drawing.Size(430, 200);
+            this.Gbxproductos.Size = new System.Drawing.Size(430, 473);
             this.Gbxproductos.TabIndex = 0;
             this.Gbxproductos.TabStop = false;
             this.Gbxproductos.Text = "Inventario";
@@ -242,7 +242,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(430, 229);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(402, 200);
+            this.panel2.Size = new System.Drawing.Size(805, 473);
             this.panel2.TabIndex = 2;
             // 
             // GbxGanacias
@@ -257,7 +257,7 @@
             this.GbxGanacias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GbxGanacias.Location = new System.Drawing.Point(0, 0);
             this.GbxGanacias.Name = "GbxGanacias";
-            this.GbxGanacias.Size = new System.Drawing.Size(402, 200);
+            this.GbxGanacias.Size = new System.Drawing.Size(805, 473);
             this.GbxGanacias.TabIndex = 0;
             this.GbxGanacias.TabStop = false;
             this.GbxGanacias.Text = "Ganancias/Vendidos";
@@ -331,8 +331,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(832, 429);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(154)))));
+            this.ClientSize = new System.Drawing.Size(1235, 702);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanSup);

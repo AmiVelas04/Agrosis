@@ -1,4 +1,4 @@
-﻿namespace Central.Formularios
+﻿namespace Agrosis.Formularios
 {
     partial class Main
     {
@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.PanLat = new System.Windows.Forms.Panel();
+            this.BtnCompra = new System.Windows.Forms.Button();
             this.BtnCod = new System.Windows.Forms.Button();
             this.BtnCap = new System.Windows.Forms.Button();
             this.BtnCaja = new System.Windows.Forms.Button();
@@ -48,7 +49,8 @@
             // 
             // PanLat
             // 
-            this.PanLat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(37)))), ((int)(((byte)(75)))));
+            this.PanLat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(157)))), ((int)(((byte)(54)))));
+            this.PanLat.Controls.Add(this.BtnCompra);
             this.PanLat.Controls.Add(this.BtnCod);
             this.PanLat.Controls.Add(this.BtnCap);
             this.PanLat.Controls.Add(this.BtnCaja);
@@ -59,8 +61,25 @@
             this.PanLat.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanLat.Location = new System.Drawing.Point(0, 0);
             this.PanLat.Name = "PanLat";
-            this.PanLat.Size = new System.Drawing.Size(131, 600);
+            this.PanLat.Size = new System.Drawing.Size(182, 768);
             this.PanLat.TabIndex = 0;
+            // 
+            // BtnCompra
+            // 
+            this.BtnCompra.FlatAppearance.BorderSize = 0;
+            this.BtnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCompra.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCompra.ForeColor = System.Drawing.Color.White;
+            this.BtnCompra.Image = ((System.Drawing.Image)(resources.GetObject("BtnCompra.Image")));
+            this.BtnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCompra.Location = new System.Drawing.Point(3, 345);
+            this.BtnCompra.Name = "BtnCompra";
+            this.BtnCompra.Size = new System.Drawing.Size(131, 35);
+            this.BtnCompra.TabIndex = 7;
+            this.BtnCompra.Text = "Compras";
+            this.BtnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCompra.UseVisualStyleBackColor = true;
+            this.BtnCompra.Click += new System.EventHandler(this.BtnCompra_Click);
             // 
             // BtnCod
             // 
@@ -70,9 +89,9 @@
             this.BtnCod.ForeColor = System.Drawing.Color.White;
             this.BtnCod.Image = ((System.Drawing.Image)(resources.GetObject("BtnCod.Image")));
             this.BtnCod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCod.Location = new System.Drawing.Point(0, 508);
+            this.BtnCod.Location = new System.Drawing.Point(0, 664);
             this.BtnCod.Name = "BtnCod";
-            this.BtnCod.Size = new System.Drawing.Size(131, 35);
+            this.BtnCod.Size = new System.Drawing.Size(131, 46);
             this.BtnCod.TabIndex = 6;
             this.BtnCod.Text = "Codigo";
             this.BtnCod.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -87,9 +106,9 @@
             this.BtnCap.ForeColor = System.Drawing.Color.White;
             this.BtnCap.Image = ((System.Drawing.Image)(resources.GetObject("BtnCap.Image")));
             this.BtnCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCap.Location = new System.Drawing.Point(3, 549);
+            this.BtnCap.Location = new System.Drawing.Point(3, 705);
             this.BtnCap.Name = "BtnCap";
-            this.BtnCap.Size = new System.Drawing.Size(122, 48);
+            this.BtnCap.Size = new System.Drawing.Size(122, 59);
             this.BtnCap.TabIndex = 5;
             this.BtnCap.Text = "Respaldo";
             this.BtnCap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -183,14 +202,14 @@
             // 
             // PanSup
             // 
-            this.PanSup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(1)))));
+            this.PanSup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(189)))), ((int)(((byte)(79)))));
             this.PanSup.Controls.Add(this.BtnMin);
             this.PanSup.Controls.Add(this.BtnCerrar);
             this.PanSup.Controls.Add(this.LblUsu);
             this.PanSup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanSup.Location = new System.Drawing.Point(131, 0);
+            this.PanSup.Location = new System.Drawing.Point(182, 0);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(869, 66);
+            this.PanSup.Size = new System.Drawing.Size(1184, 66);
             this.PanSup.TabIndex = 1;
             this.PanSup.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanSup_MouseDown);
             // 
@@ -199,9 +218,9 @@
             this.BtnMin.FlatAppearance.BorderSize = 0;
             this.BtnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMin.Image = ((System.Drawing.Image)(resources.GetObject("BtnMin.Image")));
-            this.BtnMin.Location = new System.Drawing.Point(748, 5);
+            this.BtnMin.Location = new System.Drawing.Point(1074, 0);
             this.BtnMin.Name = "BtnMin";
-            this.BtnMin.Size = new System.Drawing.Size(55, 55);
+            this.BtnMin.Size = new System.Drawing.Size(55, 66);
             this.BtnMin.TabIndex = 2;
             this.BtnMin.UseVisualStyleBackColor = true;
             this.BtnMin.Click += new System.EventHandler(this.BtnMin_Click);
@@ -212,9 +231,9 @@
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCerrar.Location = new System.Drawing.Point(809, 3);
+            this.BtnCerrar.Location = new System.Drawing.Point(1124, 0);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(60, 63);
+            this.BtnCerrar.Size = new System.Drawing.Size(60, 66);
             this.BtnCerrar.TabIndex = 1;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.button1_Click);
@@ -236,16 +255,16 @@
             this.PanCentral.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanCentral.BackgroundImage")));
             this.PanCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PanCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanCentral.Location = new System.Drawing.Point(131, 66);
+            this.PanCentral.Location = new System.Drawing.Point(182, 66);
             this.PanCentral.Name = "PanCentral";
-            this.PanCentral.Size = new System.Drawing.Size(869, 534);
+            this.PanCentral.Size = new System.Drawing.Size(1184, 702);
             this.PanCentral.TabIndex = 2;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.PanCentral);
             this.Controls.Add(this.PanSup);
             this.Controls.Add(this.PanLat);
@@ -278,5 +297,6 @@
         private System.Windows.Forms.Button BtnMin;
         private System.Windows.Forms.Button BtnCap;
         private System.Windows.Forms.Button BtnCod;
+        private System.Windows.Forms.Button BtnCompra;
     }
 }

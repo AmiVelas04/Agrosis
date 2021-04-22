@@ -13,7 +13,7 @@ using System.Drawing.Printing;
 using System.IO;
 using MySql.Data.MySqlClient;
 
-namespace Central.Clases
+namespace Agrosis.Clases
 {
 
     class Caja

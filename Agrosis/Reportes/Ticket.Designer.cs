@@ -1,4 +1,4 @@
-﻿namespace Central.Reportes
+﻿namespace Agrosis.Reportes
 {
     partial class Ticket
     {
@@ -47,7 +47,7 @@
             reportDataSource2.Value = this.FacturaEncBindingSource;
             this.RpwTicket.LocalReport.DataSources.Add(reportDataSource1);
             this.RpwTicket.LocalReport.DataSources.Add(reportDataSource2);
-            this.RpwTicket.LocalReport.ReportEmbeddedResource = "Central.Reportes.Ticket.rdlc";
+            this.RpwTicket.LocalReport.ReportEmbeddedResource = "Agrosis.Reportes.Ticket.rdlc";
             this.RpwTicket.Location = new System.Drawing.Point(0, 0);
             this.RpwTicket.Name = "RpwTicket";
             this.RpwTicket.Size = new System.Drawing.Size(284, 261);
@@ -55,11 +55,11 @@
             // 
             // FacturaDetBindingSource
             // 
-            this.FacturaDetBindingSource.DataSource = typeof(Central.Reportes.FacturaDet);
+            this.FacturaDetBindingSource.DataSource = typeof(Agrosis.Reportes.FacturaDet);
             // 
             // FacturaEncBindingSource
             // 
-            this.FacturaEncBindingSource.DataSource = typeof(Central.Reportes.FacturaEnc);
+            this.FacturaEncBindingSource.DataSource = typeof(Agrosis.Reportes.FacturaEnc);
             // 
             // Ticket
             // 

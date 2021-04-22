@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace Central.Clases
+namespace Agrosis.Clases
 {
     class Venta
     {

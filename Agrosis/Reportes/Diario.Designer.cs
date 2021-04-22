@@ -1,4 +1,4 @@
-﻿namespace Central.Reportes
+﻿namespace Agrosis.Reportes
 {
     partial class Diario
     {
@@ -34,7 +34,7 @@
             // RpvDiario
             // 
             this.RpvDiario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RpvDiario.LocalReport.ReportEmbeddedResource = "Central.Reportes.RepDiarioGen.rdlc";
+            this.RpvDiario.LocalReport.ReportEmbeddedResource = "Agrosis.Reportes.RepDiarioGen.rdlc";
             this.RpvDiario.Location = new System.Drawing.Point(0, 0);
             this.RpvDiario.Name = "RpvDiario";
             this.RpvDiario.Size = new System.Drawing.Size(763, 343);

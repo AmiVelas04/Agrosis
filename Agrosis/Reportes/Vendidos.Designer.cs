@@ -1,4 +1,4 @@
-﻿namespace Central.Reportes
+﻿namespace Agrosis.Reportes
 {
     partial class Vendidos
     {
@@ -47,7 +47,7 @@
             reportDataSource2.Value = this.DiarioEncBindingSource;
             this.Rpv1.LocalReport.DataSources.Add(reportDataSource1);
             this.Rpv1.LocalReport.DataSources.Add(reportDataSource2);
-            this.Rpv1.LocalReport.ReportEmbeddedResource = "Central.Reportes.Vendidos.rdlc";
+            this.Rpv1.LocalReport.ReportEmbeddedResource = "Agrosis.Reportes.Vendidos.rdlc";
             this.Rpv1.Location = new System.Drawing.Point(0, 0);
             this.Rpv1.Name = "Rpv1";
             this.Rpv1.Size = new System.Drawing.Size(930, 320);
@@ -55,11 +55,11 @@
             // 
             // DiarioDetBindingSource
             // 
-            this.DiarioDetBindingSource.DataSource = typeof(Central.Reportes.DiarioDet);
+            this.DiarioDetBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioDet);
             // 
             // DiarioEncBindingSource
             // 
-            this.DiarioEncBindingSource.DataSource = typeof(Central.Reportes.DiarioEnc);
+            this.DiarioEncBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioEnc);
             // 
             // Vendidos
             // 

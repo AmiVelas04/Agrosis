@@ -1067,9 +1067,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Central.Reportes</rd:DataSetName>
+        <rd:DataSetName>Agrosis.Reportes</rd:DataSetName>
         <rd:TableName>FacturaDet</rd:TableName>
-        <rd:ObjectDataSourceType>Central.Reportes.FacturaDet, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Agrosis.Reportes.FacturaDet, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="Titulo">
@@ -1112,9 +1112,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Central.Reportes</rd:DataSetName>
+        <rd:DataSetName>Agrosis.Reportes</rd:DataSetName>
         <rd:TableName>FacturaEnc</rd:TableName>
-        <rd:ObjectDataSourceType>Central.Reportes.FacturaEnc, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Agrosis.Reportes.FacturaEnc, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

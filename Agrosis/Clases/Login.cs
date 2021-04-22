@@ -7,7 +7,7 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-namespace Central.Clases
+namespace Agrosis.Clases
 {
     class Login
     {

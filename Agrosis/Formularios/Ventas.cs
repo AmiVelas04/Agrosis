@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace Central.Formularios
+namespace Agrosis.Formularios
 {
     public partial class Ventas : Form
     {
@@ -70,12 +70,18 @@ namespace Central.Formularios
                    // DgvProd.Columns[7].Visible = false;
                    // DgvProd.Columns[8].Visible = false;
                 }
+                string Preciov1, Preciov2, Preciom1, Preciom2;
                 DataTable prods = new DataTable();
                 prods = prod.buscarprod(codigo);
+                Preciov1 = prods.Rows[0][4].ToString();
+                Preciov2 = prods.Rows[0][9].ToString();
+                Preciom1 = prods.Rows[0][10].ToString();
+                Preciom2 = prods.Rows[0][11].ToString();
 
-                decimal subtotal=decimal.Parse(NudCant .Value.ToString () )*decimal.Parse (prods.Rows[0][4].ToString());
+                decimal subtotal=decimal.Parse(NudCant .Value.ToString () )*decimal.Parse (prods.Rows[0][11].ToString());
                 
-                DgvProd.Rows.Add(codigo,prods.Rows[0][0].ToString(), prods.Rows[0][1].ToString(), prods.Rows[0][2].ToString(), prods.Rows[0][4].ToString(), NudCant.Value,subtotal, prods.Rows[0][7].ToString(), prods.Rows[0][8].ToString());
+                DgvProd.Rows.Add(codigo,prods.Rows[0][0].ToString(), prods.Rows[0][1].ToString(), prods.Rows[0][2].ToString(), prods.Rows[0][11].ToString(), NudCant.Value,subtotal, prods.Rows[0][7].ToString(), prods.Rows[0][8].ToString());
+                PrecioLst(Preciov1, Preciov2, Preciom1, Preciom2);
                 calcTot();
                 contarprod();
                 TxtCod.Focus();
@@ -352,11 +358,6 @@ namespace Central.Formularios
             
         }
 
-        private void TxtEfect_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void TxtEfect_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
@@ -416,10 +417,7 @@ namespace Central.Formularios
             }
         }
 
-        private void BtnAgreg_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Ventas_KeyDown(object sender, KeyEventArgs e)
         {
@@ -486,6 +484,20 @@ namespace Central.Formularios
              listprod(cod);
         }
 
+
+        private void PrecioLst(string p1, string p2, string p3, string p4)
+        {
+            while (CboPrecio.Items.Count>=1)
+            {
+                CboPrecio.Items.RemoveAt(0);
+            }
+            CboPrecio.Items.Add(p1);
+            CboPrecio.Items.Add(p2);
+            CboPrecio.Items.Add(p3);
+            CboPrecio.Items.Add(p4);
+            CboPrecio.SelectedIndex = 3;
+        }
+       
 
     }
 }

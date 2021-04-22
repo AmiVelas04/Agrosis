@@ -1063,9 +1063,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Central.Reportes</rd:DataSetName>
+        <rd:DataSetName>Agrosis.Reportes</rd:DataSetName>
         <rd:TableName>DiarioEnc</rd:TableName>
-        <rd:ObjectDataSourceType>Central.Reportes.DiarioEnc, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Agrosis.Reportes.DiarioEnc, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="MasV">
@@ -1084,9 +1084,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Central.Reportes</rd:DataSetName>
+        <rd:DataSetName>Agrosis.Reportes</rd:DataSetName>
         <rd:TableName>Diezmas</rd:TableName>
-        <rd:ObjectDataSourceType>Central.Reportes.Diezmas, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Agrosis.Reportes.Diezmas, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="Produ">
@@ -1133,9 +1133,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Central.Reportes</rd:DataSetName>
+        <rd:DataSetName>Agrosis.Reportes</rd:DataSetName>
         <rd:TableName>DiarioDet</rd:TableName>
-        <rd:ObjectDataSourceType>Central.Reportes.DiarioDet, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Agrosis.Reportes.DiarioDet, Central, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

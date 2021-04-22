@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Printing;
 
-namespace Central.Clases
+namespace Agrosis.Clases
 {
     class Imprimir
     {

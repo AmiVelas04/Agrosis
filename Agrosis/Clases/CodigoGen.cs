@@ -13,7 +13,7 @@ using System.Drawing.Imaging;
 
 
 
-namespace Central.Clases
+namespace Agrosis.Clases
 {
     class CodigoGen
     {

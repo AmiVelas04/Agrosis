@@ -1,4 +1,4 @@
-﻿namespace Central.Formularios
+﻿namespace Agrosis.Formularios
 {
     partial class Productos
     {
@@ -97,7 +97,7 @@
             this.PanDer.Location = new System.Drawing.Point(0, 0);
             this.PanDer.Margin = new System.Windows.Forms.Padding(5);
             this.PanDer.Name = "PanDer";
-            this.PanDer.Size = new System.Drawing.Size(297, 487);
+            this.PanDer.Size = new System.Drawing.Size(297, 702);
             this.PanDer.TabIndex = 0;
             // 
             // Chk1
@@ -221,7 +221,7 @@
             // BtnAdd
             // 
             this.BtnAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnAdd.Location = new System.Drawing.Point(0, 439);
+            this.BtnAdd.Location = new System.Drawing.Point(0, 654);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(5);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(297, 48);
@@ -341,10 +341,10 @@
             this.PanAba.Controls.Add(this.TxtCodp);
             this.PanAba.Controls.Add(this.label9);
             this.PanAba.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanAba.Location = new System.Drawing.Point(297, 390);
+            this.PanAba.Location = new System.Drawing.Point(297, 605);
             this.PanAba.Margin = new System.Windows.Forms.Padding(5);
             this.PanAba.Name = "PanAba";
-            this.PanAba.Size = new System.Drawing.Size(574, 97);
+            this.PanAba.Size = new System.Drawing.Size(938, 97);
             this.PanAba.TabIndex = 1;
             // 
             // BtnEdit
@@ -426,7 +426,7 @@
             this.PanCent.Location = new System.Drawing.Point(297, 0);
             this.PanCent.Margin = new System.Windows.Forms.Padding(5);
             this.PanCent.Name = "PanCent";
-            this.PanCent.Size = new System.Drawing.Size(574, 390);
+            this.PanCent.Size = new System.Drawing.Size(938, 605);
             this.PanCent.TabIndex = 2;
             // 
             // DgvDatos
@@ -444,7 +444,7 @@
             this.DgvDatos.Name = "DgvDatos";
             this.DgvDatos.ReadOnly = true;
             this.DgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvDatos.Size = new System.Drawing.Size(574, 390);
+            this.DgvDatos.Size = new System.Drawing.Size(938, 605);
             this.DgvDatos.TabIndex = 0;
             this.DgvDatos.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvDatos_ColumnHeaderMouseClick);
             this.DgvDatos.ColumnSortModeChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DgvDatos_ColumnSortModeChanged);
@@ -453,8 +453,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(871, 487);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(154)))));
+            this.ClientSize = new System.Drawing.Size(1235, 702);
             this.Controls.Add(this.PanCent);
             this.Controls.Add(this.PanAba);
             this.Controls.Add(this.PanDer);

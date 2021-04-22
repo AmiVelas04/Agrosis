@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Central.Reportes
+namespace Agrosis.Reportes
 {
  partial class ImpCodigo : Form
     {

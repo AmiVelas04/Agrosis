@@ -13,7 +13,7 @@ using System.IO;
 using Microsoft.Reporting.WinForms;
 using System.Drawing.Imaging;
 
-namespace Central.Reportes
+namespace Agrosis.Reportes
 {
     partial class Ticket : Form, IDisposable
     {
