@@ -72,5 +72,10 @@ namespace Agrosis.Formularios
                 loguear();
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            TxtUsu.Focus();
+        }
     }
 }

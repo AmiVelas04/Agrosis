@@ -50,6 +50,9 @@
   <PropertyGroup>
     <StartupObject>Agrosis.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Img para icono 2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -109,6 +112,7 @@
   <ItemGroup>
     <Compile Include="Clases\Caja.cs" />
     <Compile Include="Clases\Cajon.cs" />
+    <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\CodigoGen.cs" />
     <Compile Include="Clases\Compra.cs" />
     <Compile Include="Clases\Conexion.cs" />
@@ -124,6 +128,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AddCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AddCliente.Designer.cs">
+      <DependentUpon>AddCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AgregaProv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AgregaProv.Designer.cs">
+      <DependentUpon>AgregaProv.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\BuscaRap.cs">
       <SubType>Form</SubType>
@@ -179,6 +195,12 @@
     <Compile Include="Formularios\Respaldo.Designer.cs">
       <DependentUpon>Respaldo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Servicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Servicio.Designer.cs">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +215,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\CompraDet.cs" />
+    <Compile Include="Reportes\CompraEnc.cs" />
+    <Compile Include="Reportes\CompraRepo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\CompraRepo.Designer.cs">
+      <DependentUpon>CompraRepo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Diario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +293,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AddCliente.resx">
+      <DependentUpon>AddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AgregaProv.resx">
+      <DependentUpon>AgregaProv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\BuscaRap.resx">
       <DependentUpon>BuscaRap.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -299,6 +335,9 @@
       <DependentUpon>Respaldo.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Servicio.resx">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -316,6 +355,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\CompraRepo.rdlc" />
+    <EmbeddedResource Include="Reportes\CompraRepo.resx">
+      <DependentUpon>CompraRepo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Diario.resx">
       <DependentUpon>Diario.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -340,7 +383,13 @@
       <DependentUpon>Masven.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Mensual.resx">
+      <DependentUpon>Mensual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RepDiarioGen.rdlc" />
+    <EmbeddedResource Include="Reportes\Semanal.resx">
+      <DependentUpon>Semanal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ticket.rdlc" />
     <EmbeddedResource Include="Reportes\Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
@@ -354,6 +403,9 @@
       <DependentUpon>Vendidos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Agrosis.Reportes.CompraDet.datasource" />
+    <None Include="Properties\DataSources\Agrosis.Reportes.CompraEnc.datasource" />
+    <None Include="Properties\DataSources\Agrosis.Reportes.FacturaEnc.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -378,6 +430,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img para icono 2.ico" />
+    <Content Include="Img para icono.ico" />
+    <Content Include="sniffer.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

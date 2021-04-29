@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.PanDer = new System.Windows.Forms.Panel();
+            this.TxtPrecio_V1 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.TxtPrecio_M2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.TxtPrecio_M1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.Chk1 = new System.Windows.Forms.CheckBox();
             this.NudPack = new System.Windows.Forms.NumericUpDown();
             this.TxtPpack = new System.Windows.Forms.TextBox();
@@ -39,7 +45,7 @@
             this.DtpCad = new System.Windows.Forms.DateTimePicker();
             this.Nud = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            this.TxtVenta = new System.Windows.Forms.TextBox();
+            this.TxtPrecio_V2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.TxtCosto = new System.Windows.Forms.TextBox();
@@ -53,6 +59,7 @@
             this.TxtCod = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PanAba = new System.Windows.Forms.Panel();
+            this.BtnServ = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.TxtNomP = new System.Windows.Forms.TextBox();
@@ -61,6 +68,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.PanCent = new System.Windows.Forms.Panel();
             this.DgvDatos = new System.Windows.Forms.DataGridView();
+            this.BtnBuscServ = new System.Windows.Forms.Button();
             this.PanDer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudPack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nud)).BeginInit();
@@ -71,6 +79,12 @@
             // 
             // PanDer
             // 
+            this.PanDer.Controls.Add(this.TxtPrecio_V1);
+            this.PanDer.Controls.Add(this.label15);
+            this.PanDer.Controls.Add(this.TxtPrecio_M2);
+            this.PanDer.Controls.Add(this.label14);
+            this.PanDer.Controls.Add(this.TxtPrecio_M1);
+            this.PanDer.Controls.Add(this.label13);
             this.PanDer.Controls.Add(this.Chk1);
             this.PanDer.Controls.Add(this.NudPack);
             this.PanDer.Controls.Add(this.TxtPpack);
@@ -80,7 +94,7 @@
             this.PanDer.Controls.Add(this.DtpCad);
             this.PanDer.Controls.Add(this.Nud);
             this.PanDer.Controls.Add(this.label7);
-            this.PanDer.Controls.Add(this.TxtVenta);
+            this.PanDer.Controls.Add(this.TxtPrecio_V2);
             this.PanDer.Controls.Add(this.label6);
             this.PanDer.Controls.Add(this.BtnAdd);
             this.PanDer.Controls.Add(this.TxtCosto);
@@ -97,13 +111,76 @@
             this.PanDer.Location = new System.Drawing.Point(0, 0);
             this.PanDer.Margin = new System.Windows.Forms.Padding(5);
             this.PanDer.Name = "PanDer";
-            this.PanDer.Size = new System.Drawing.Size(297, 702);
+            this.PanDer.Size = new System.Drawing.Size(342, 702);
             this.PanDer.TabIndex = 0;
+            // 
+            // TxtPrecio_V1
+            // 
+            this.TxtPrecio_V1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrecio_V1.Location = new System.Drawing.Point(184, 303);
+            this.TxtPrecio_V1.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtPrecio_V1.Name = "TxtPrecio_V1";
+            this.TxtPrecio_V1.Size = new System.Drawing.Size(122, 25);
+            this.TxtPrecio_V1.TabIndex = 34;
+            this.TxtPrecio_V1.Text = "0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(187, 281);
+            this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(96, 17);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "Precio Venta 1";
+            // 
+            // TxtPrecio_M2
+            // 
+            this.TxtPrecio_M2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrecio_M2.Location = new System.Drawing.Point(20, 303);
+            this.TxtPrecio_M2.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtPrecio_M2.Name = "TxtPrecio_M2";
+            this.TxtPrecio_M2.Size = new System.Drawing.Size(125, 25);
+            this.TxtPrecio_M2.TabIndex = 32;
+            this.TxtPrecio_M2.Text = "0";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(23, 281);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 17);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Precio Mayorista 2";
+            // 
+            // TxtPrecio_M1
+            // 
+            this.TxtPrecio_M1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrecio_M1.Location = new System.Drawing.Point(184, 237);
+            this.TxtPrecio_M1.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtPrecio_M1.Name = "TxtPrecio_M1";
+            this.TxtPrecio_M1.Size = new System.Drawing.Size(122, 25);
+            this.TxtPrecio_M1.TabIndex = 30;
+            this.TxtPrecio_M1.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(187, 215);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(122, 17);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Precio Mayorista 1";
             // 
             // Chk1
             // 
             this.Chk1.AutoSize = true;
-            this.Chk1.Location = new System.Drawing.Point(244, 372);
+            this.Chk1.Location = new System.Drawing.Point(244, 436);
             this.Chk1.Name = "Chk1";
             this.Chk1.Size = new System.Drawing.Size(15, 14);
             this.Chk1.TabIndex = 28;
@@ -112,47 +189,51 @@
             // 
             // NudPack
             // 
-            this.NudPack.Location = new System.Drawing.Point(20, 307);
+            this.NudPack.Location = new System.Drawing.Point(20, 591);
             this.NudPack.Name = "NudPack";
             this.NudPack.Size = new System.Drawing.Size(98, 29);
             this.NudPack.TabIndex = 12;
             this.NudPack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NudPack.Visible = false;
             // 
             // TxtPpack
             // 
             this.TxtPpack.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPpack.Location = new System.Drawing.Point(128, 307);
+            this.TxtPpack.Location = new System.Drawing.Point(128, 591);
             this.TxtPpack.Margin = new System.Windows.Forms.Padding(5);
             this.TxtPpack.Name = "TxtPpack";
             this.TxtPpack.Size = new System.Drawing.Size(114, 25);
             this.TxtPpack.TabIndex = 13;
             this.TxtPpack.Text = "0";
+            this.TxtPpack.Visible = false;
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(138, 268);
+            this.label11.Location = new System.Drawing.Point(138, 552);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 34);
             this.label11.TabIndex = 25;
             this.label11.Text = "Precio por Paquete";
+            this.label11.Visible = false;
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 268);
+            this.label12.Location = new System.Drawing.Point(23, 552);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 36);
             this.label12.TabIndex = 23;
             this.label12.Text = "Cantidad por Paquete";
+            this.label12.Visible = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(114, 368);
+            this.label8.Location = new System.Drawing.Point(114, 432);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(128, 17);
@@ -163,7 +244,7 @@
             // 
             this.DtpCad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpCad.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpCad.Location = new System.Drawing.Point(113, 391);
+            this.DtpCad.Location = new System.Drawing.Point(113, 455);
             this.DtpCad.Margin = new System.Windows.Forms.Padding(5);
             this.DtpCad.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.DtpCad.MinDate = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
@@ -174,7 +255,7 @@
             // Nud
             // 
             this.Nud.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nud.Location = new System.Drawing.Point(20, 390);
+            this.Nud.Location = new System.Drawing.Point(20, 454);
             this.Nud.Margin = new System.Windows.Forms.Padding(5);
             this.Nud.Maximum = new decimal(new int[] {
             1000,
@@ -190,33 +271,33 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 368);
+            this.label7.Location = new System.Drawing.Point(23, 432);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Cantidad";
             // 
-            // TxtVenta
+            // TxtPrecio_V2
             // 
-            this.TxtVenta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtVenta.Location = new System.Drawing.Point(128, 237);
-            this.TxtVenta.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtVenta.Name = "TxtVenta";
-            this.TxtVenta.Size = new System.Drawing.Size(114, 25);
-            this.TxtVenta.TabIndex = 11;
-            this.TxtVenta.Text = "0";
+            this.TxtPrecio_V2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrecio_V2.Location = new System.Drawing.Point(20, 367);
+            this.TxtPrecio_V2.Margin = new System.Windows.Forms.Padding(5);
+            this.TxtPrecio_V2.Name = "TxtPrecio_V2";
+            this.TxtPrecio_V2.Size = new System.Drawing.Size(125, 25);
+            this.TxtPrecio_V2.TabIndex = 11;
+            this.TxtPrecio_V2.Text = "0";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(138, 215);
+            this.label6.Location = new System.Drawing.Point(23, 345);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 17);
+            this.label6.Size = new System.Drawing.Size(96, 17);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Precio Venta";
+            this.label6.Text = "Precio Venta 2";
             // 
             // BtnAdd
             // 
@@ -224,7 +305,7 @@
             this.BtnAdd.Location = new System.Drawing.Point(0, 654);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(5);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(297, 48);
+            this.BtnAdd.Size = new System.Drawing.Size(342, 48);
             this.BtnAdd.TabIndex = 16;
             this.BtnAdd.Text = "Agregar";
             this.BtnAdd.UseVisualStyleBackColor = true;
@@ -236,7 +317,7 @@
             this.TxtCosto.Location = new System.Drawing.Point(20, 237);
             this.TxtCosto.Margin = new System.Windows.Forms.Padding(5);
             this.TxtCosto.Name = "TxtCosto";
-            this.TxtCosto.Size = new System.Drawing.Size(98, 25);
+            this.TxtCosto.Size = new System.Drawing.Size(125, 25);
             this.TxtCosto.TabIndex = 9;
             this.TxtCosto.Text = "0";
             // 
@@ -257,7 +338,7 @@
             this.TxtMarca.Location = new System.Drawing.Point(20, 185);
             this.TxtMarca.Margin = new System.Windows.Forms.Padding(5);
             this.TxtMarca.Name = "TxtMarca";
-            this.TxtMarca.Size = new System.Drawing.Size(222, 25);
+            this.TxtMarca.Size = new System.Drawing.Size(219, 25);
             this.TxtMarca.TabIndex = 7;
             // 
             // label4
@@ -277,7 +358,7 @@
             this.TxtDesc.Location = new System.Drawing.Point(20, 133);
             this.TxtDesc.Margin = new System.Windows.Forms.Padding(5);
             this.TxtDesc.Name = "TxtDesc";
-            this.TxtDesc.Size = new System.Drawing.Size(222, 25);
+            this.TxtDesc.Size = new System.Drawing.Size(286, 25);
             this.TxtDesc.TabIndex = 5;
             // 
             // label3
@@ -297,7 +378,7 @@
             this.TxtNom.Location = new System.Drawing.Point(20, 81);
             this.TxtNom.Margin = new System.Windows.Forms.Padding(5);
             this.TxtNom.Name = "TxtNom";
-            this.TxtNom.Size = new System.Drawing.Size(222, 25);
+            this.TxtNom.Size = new System.Drawing.Size(286, 25);
             this.TxtNom.TabIndex = 3;
             // 
             // label2
@@ -317,7 +398,7 @@
             this.TxtCod.Location = new System.Drawing.Point(20, 29);
             this.TxtCod.Margin = new System.Windows.Forms.Padding(5);
             this.TxtCod.Name = "TxtCod";
-            this.TxtCod.Size = new System.Drawing.Size(222, 25);
+            this.TxtCod.Size = new System.Drawing.Size(286, 25);
             this.TxtCod.TabIndex = 1;
             this.TxtCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCod_KeyDown);
             // 
@@ -334,6 +415,8 @@
             // 
             // PanAba
             // 
+            this.PanAba.Controls.Add(this.BtnBuscServ);
+            this.PanAba.Controls.Add(this.BtnServ);
             this.PanAba.Controls.Add(this.BtnEdit);
             this.PanAba.Controls.Add(this.BtnBuscar);
             this.PanAba.Controls.Add(this.TxtNomP);
@@ -341,11 +424,24 @@
             this.PanAba.Controls.Add(this.TxtCodp);
             this.PanAba.Controls.Add(this.label9);
             this.PanAba.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanAba.Location = new System.Drawing.Point(297, 605);
+            this.PanAba.Location = new System.Drawing.Point(342, 568);
             this.PanAba.Margin = new System.Windows.Forms.Padding(5);
             this.PanAba.Name = "PanAba";
-            this.PanAba.Size = new System.Drawing.Size(938, 97);
+            this.PanAba.Size = new System.Drawing.Size(846, 134);
             this.PanAba.TabIndex = 1;
+            // 
+            // BtnServ
+            // 
+            this.BtnServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnServ.Image")));
+            this.BtnServ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnServ.Location = new System.Drawing.Point(645, 35);
+            this.BtnServ.Name = "BtnServ";
+            this.BtnServ.Size = new System.Drawing.Size(189, 56);
+            this.BtnServ.TabIndex = 6;
+            this.BtnServ.Text = "Agregar Servicios";
+            this.BtnServ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnServ.UseVisualStyleBackColor = true;
+            this.BtnServ.Click += new System.EventHandler(this.BtnServ_Click);
             // 
             // BtnEdit
             // 
@@ -355,9 +451,9 @@
             this.BtnEdit.ForeColor = System.Drawing.Color.White;
             this.BtnEdit.Image = ((System.Drawing.Image)(resources.GetObject("BtnEdit.Image")));
             this.BtnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEdit.Location = new System.Drawing.Point(8, 54);
+            this.BtnEdit.Location = new System.Drawing.Point(179, 71);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(102, 36);
+            this.BtnEdit.Size = new System.Drawing.Size(123, 59);
             this.BtnEdit.TabIndex = 5;
             this.BtnEdit.Text = "Editar";
             this.BtnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -371,21 +467,22 @@
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.ForeColor = System.Drawing.Color.White;
             this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnBuscar.Location = new System.Drawing.Point(8, 6);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(102, 42);
+            this.BtnBuscar.Size = new System.Drawing.Size(150, 60);
             this.BtnBuscar.TabIndex = 4;
-            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.Text = "Buscar Producto";
             this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // TxtNomP
             // 
-            this.TxtNomP.Location = new System.Drawing.Point(386, 31);
+            this.TxtNomP.Location = new System.Drawing.Point(354, 91);
             this.TxtNomP.Name = "TxtNomP";
-            this.TxtNomP.Size = new System.Drawing.Size(164, 29);
+            this.TxtNomP.Size = new System.Drawing.Size(174, 29);
             this.TxtNomP.TabIndex = 3;
             this.TxtNomP.Visible = false;
             this.TxtNomP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtNomP_KeyDown);
@@ -393,7 +490,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(400, 5);
+            this.label10.Location = new System.Drawing.Point(360, 67);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 21);
             this.label10.TabIndex = 2;
@@ -402,9 +499,9 @@
             // 
             // TxtCodp
             // 
-            this.TxtCodp.Location = new System.Drawing.Point(213, 31);
+            this.TxtCodp.Location = new System.Drawing.Point(354, 35);
             this.TxtCodp.Name = "TxtCodp";
-            this.TxtCodp.Size = new System.Drawing.Size(164, 29);
+            this.TxtCodp.Size = new System.Drawing.Size(174, 29);
             this.TxtCodp.TabIndex = 1;
             this.TxtCodp.Visible = false;
             this.TxtCodp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCodp_KeyDown);
@@ -412,7 +509,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(209, 6);
+            this.label9.Location = new System.Drawing.Point(360, 10);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 21);
             this.label9.TabIndex = 0;
@@ -423,10 +520,10 @@
             // 
             this.PanCent.Controls.Add(this.DgvDatos);
             this.PanCent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanCent.Location = new System.Drawing.Point(297, 0);
+            this.PanCent.Location = new System.Drawing.Point(342, 0);
             this.PanCent.Margin = new System.Windows.Forms.Padding(5);
             this.PanCent.Name = "PanCent";
-            this.PanCent.Size = new System.Drawing.Size(938, 605);
+            this.PanCent.Size = new System.Drawing.Size(846, 568);
             this.PanCent.TabIndex = 2;
             // 
             // DgvDatos
@@ -444,17 +541,35 @@
             this.DgvDatos.Name = "DgvDatos";
             this.DgvDatos.ReadOnly = true;
             this.DgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvDatos.Size = new System.Drawing.Size(938, 605);
+            this.DgvDatos.Size = new System.Drawing.Size(846, 568);
             this.DgvDatos.TabIndex = 0;
             this.DgvDatos.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvDatos_ColumnHeaderMouseClick);
             this.DgvDatos.ColumnSortModeChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DgvDatos_ColumnSortModeChanged);
+            // 
+            // BtnBuscServ
+            // 
+            this.BtnBuscServ.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnBuscServ.FlatAppearance.BorderSize = 0;
+            this.BtnBuscServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscServ.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscServ.Image")));
+            this.BtnBuscServ.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnBuscServ.Location = new System.Drawing.Point(8, 71);
+            this.BtnBuscServ.Name = "BtnBuscServ";
+            this.BtnBuscServ.Size = new System.Drawing.Size(150, 60);
+            this.BtnBuscServ.TabIndex = 7;
+            this.BtnBuscServ.Text = "Buscar Servicio";
+            this.BtnBuscServ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBuscServ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnBuscServ.UseVisualStyleBackColor = false;
+            this.BtnBuscServ.Click += new System.EventHandler(this.BtnBuscServ_Click);
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(1235, 702);
+            this.ClientSize = new System.Drawing.Size(1188, 702);
             this.Controls.Add(this.PanCent);
             this.Controls.Add(this.PanAba);
             this.Controls.Add(this.PanDer);
@@ -492,7 +607,7 @@
         private System.Windows.Forms.TextBox TxtNom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView DgvDatos;
-        private System.Windows.Forms.TextBox TxtVenta;
+        private System.Windows.Forms.TextBox TxtPrecio_V2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker DtpCad;
         private System.Windows.Forms.NumericUpDown Nud;
@@ -509,5 +624,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.CheckBox Chk1;
+        private System.Windows.Forms.TextBox TxtPrecio_V1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox TxtPrecio_M2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox TxtPrecio_M1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button BtnServ;
+        private System.Windows.Forms.Button BtnBuscServ;
     }
 }

@@ -61,5 +61,13 @@ namespace Agrosis.Formularios
             fechaf = DtpGf.Value.ToString("yyyy/MM/dd");
             Rep.Vendidos(fechai,fechaf);
         }
+
+        private void BtnCompras_Click(object sender, EventArgs e)
+        {
+            string fechai, fechaf;
+            fechai = DtpTi.Value.ToString("yyyy/MM/dd");
+            fechaf = DtpTf.Value.ToString("yyyy/MM/dd");
+            Rep.reporteCompras(fechai, fechaf);
+        }
     }
 }

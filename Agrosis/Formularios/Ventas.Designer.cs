@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanSup = new System.Windows.Forms.Panel();
+            this.CboPrecio = new System.Windows.Forms.ComboBox();
+            this.ChkCprecio = new System.Windows.Forms.CheckBox();
             this.CboNom = new System.Windows.Forms.ComboBox();
             this.TxtTotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,8 +63,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.DgvProd = new System.Windows.Forms.DataGridView();
             this.Ttinfo = new System.Windows.Forms.ToolTip(this.components);
-            this.ChkCprecio = new System.Windows.Forms.CheckBox();
-            this.CboPrecio = new System.Windows.Forms.ComboBox();
+            this.CboCli = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TxtNit = new System.Windows.Forms.TextBox();
+            this.AddClie = new System.Windows.Forms.Button();
             this.PanSup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudCant)).BeginInit();
             this.PanLat.SuspendLayout();
@@ -97,6 +102,26 @@
             this.PanSup.Name = "PanSup";
             this.PanSup.Size = new System.Drawing.Size(1184, 133);
             this.PanSup.TabIndex = 0;
+            // 
+            // CboPrecio
+            // 
+            this.CboPrecio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboPrecio.FormattingEnabled = true;
+            this.CboPrecio.Location = new System.Drawing.Point(603, 27);
+            this.CboPrecio.Name = "CboPrecio";
+            this.CboPrecio.Size = new System.Drawing.Size(174, 28);
+            this.CboPrecio.TabIndex = 19;
+            this.CboPrecio.SelectedIndexChanged += new System.EventHandler(this.CboPrecio_SelectedIndexChanged);
+            // 
+            // ChkCprecio
+            // 
+            this.ChkCprecio.AutoSize = true;
+            this.ChkCprecio.Location = new System.Drawing.Point(667, 70);
+            this.ChkCprecio.Name = "ChkCprecio";
+            this.ChkCprecio.Size = new System.Drawing.Size(110, 24);
+            this.ChkCprecio.TabIndex = 18;
+            this.ChkCprecio.Text = "Precio Libre";
+            this.ChkCprecio.UseVisualStyleBackColor = true;
             // 
             // CboNom
             // 
@@ -214,7 +239,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(307, 70);
+            this.label4.Location = new System.Drawing.Point(318, 70);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
@@ -397,10 +422,10 @@
             // 
             this.panel3.Controls.Add(this.DgvProd);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 254);
+            this.panel3.Location = new System.Drawing.Point(0, 200);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(952, 448);
+            this.panel3.Size = new System.Drawing.Size(952, 502);
             this.panel3.TabIndex = 2;
             // 
             // DgvProd
@@ -418,6 +443,7 @@
             this.DgvProd.EnableHeadersVisualStyles = false;
             this.DgvProd.Location = new System.Drawing.Point(0, 0);
             this.DgvProd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DgvProd.MultiSelect = false;
             this.DgvProd.Name = "DgvProd";
             this.DgvProd.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -426,28 +452,63 @@
             this.DgvProd.ShowCellToolTips = false;
             this.DgvProd.ShowEditingIcon = false;
             this.DgvProd.ShowRowErrors = false;
-            this.DgvProd.Size = new System.Drawing.Size(952, 448);
+            this.DgvProd.Size = new System.Drawing.Size(952, 502);
             this.DgvProd.TabIndex = 0;
             this.DgvProd.Click += new System.EventHandler(this.DgvProd_Click);
             // 
-            // ChkCprecio
+            // CboCli
             // 
-            this.ChkCprecio.AutoSize = true;
-            this.ChkCprecio.Location = new System.Drawing.Point(667, 70);
-            this.ChkCprecio.Name = "ChkCprecio";
-            this.ChkCprecio.Size = new System.Drawing.Size(110, 24);
-            this.ChkCprecio.TabIndex = 18;
-            this.ChkCprecio.Text = "Precio Libre";
-            this.ChkCprecio.UseVisualStyleBackColor = true;
+            this.CboCli.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CboCli.DropDownWidth = 400;
+            this.CboCli.FormattingEnabled = true;
+            this.CboCli.Location = new System.Drawing.Point(13, 156);
+            this.CboCli.MaxDropDownItems = 10;
+            this.CboCli.Name = "CboCli";
+            this.CboCli.Size = new System.Drawing.Size(275, 28);
+            this.CboCli.TabIndex = 19;
+            this.CboCli.SelectedIndexChanged += new System.EventHandler(this.CboCli_SelectedIndexChanged);
             // 
-            // CboPrecio
+            // label10
             // 
-            this.CboPrecio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboPrecio.FormattingEnabled = true;
-            this.CboPrecio.Location = new System.Drawing.Point(603, 27);
-            this.CboPrecio.Name = "CboPrecio";
-            this.CboPrecio.Size = new System.Drawing.Size(174, 28);
-            this.CboPrecio.TabIndex = 19;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 136);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 20);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Cliente";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(318, 136);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 20);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Nit";
+            // 
+            // TxtNit
+            // 
+            this.TxtNit.Enabled = false;
+            this.TxtNit.Location = new System.Drawing.Point(311, 159);
+            this.TxtNit.Name = "TxtNit";
+            this.TxtNit.Size = new System.Drawing.Size(121, 27);
+            this.TxtNit.TabIndex = 21;
+            this.TxtNit.Text = "C/F";
+            // 
+            // AddClie
+            // 
+            this.AddClie.Image = ((System.Drawing.Image)(resources.GetObject("AddClie.Image")));
+            this.AddClie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddClie.Location = new System.Drawing.Point(808, 141);
+            this.AddClie.Name = "AddClie";
+            this.AddClie.Size = new System.Drawing.Size(130, 51);
+            this.AddClie.TabIndex = 22;
+            this.AddClie.Text = "Agregar Cliente";
+            this.AddClie.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddClie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddClie.UseVisualStyleBackColor = true;
+            this.AddClie.Click += new System.EventHandler(this.AddClie_Click);
             // 
             // Ventas
             // 
@@ -455,6 +516,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1184, 702);
+            this.Controls.Add(this.AddClie);
+            this.Controls.Add(this.TxtNit);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.CboCli);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.PanLat);
             this.Controls.Add(this.PanSup);
@@ -474,6 +540,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvProd)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -511,5 +578,10 @@
         private System.Windows.Forms.ComboBox CboNom;
         private System.Windows.Forms.CheckBox ChkCprecio;
         private System.Windows.Forms.ComboBox CboPrecio;
+        private System.Windows.Forms.ComboBox CboCli;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox TxtNit;
+        private System.Windows.Forms.Button AddClie;
     }
 }

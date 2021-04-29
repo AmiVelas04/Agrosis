@@ -48,7 +48,7 @@
             this.BtnIniciar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIniciar.Name = "BtnIniciar";
             this.BtnIniciar.Size = new System.Drawing.Size(129, 38);
-            this.BtnIniciar.TabIndex = 0;
+            this.BtnIniciar.TabIndex = 3;
             this.BtnIniciar.Text = "Iniciar Sesion";
             this.BtnIniciar.UseVisualStyleBackColor = false;
             this.BtnIniciar.Click += new System.EventHandler(this.BtnIniciar_Click);
@@ -71,7 +71,8 @@
             this.BtnCerrar.Location = new System.Drawing.Point(174, 0);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(62, 55);
-            this.BtnCerrar.TabIndex = 0;
+            this.BtnCerrar.TabIndex = 7;
+            this.BtnCerrar.TabStop = false;
             this.BtnCerrar.UseVisualStyleBackColor = true;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
@@ -82,7 +83,7 @@
             this.label1.Location = new System.Drawing.Point(22, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 17);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 20;
             this.label1.Text = "Usuario";
             // 
             // TxtUsu
@@ -90,7 +91,7 @@
             this.TxtUsu.Location = new System.Drawing.Point(25, 86);
             this.TxtUsu.Name = "TxtUsu";
             this.TxtUsu.Size = new System.Drawing.Size(184, 25);
-            this.TxtUsu.TabIndex = 3;
+            this.TxtUsu.TabIndex = 1;
             this.TxtUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -109,7 +110,7 @@
             this.TxtPass.Name = "TxtPass";
             this.TxtPass.PasswordChar = '*';
             this.TxtPass.Size = new System.Drawing.Size(184, 25);
-            this.TxtPass.TabIndex = 5;
+            this.TxtPass.TabIndex = 2;
             this.TxtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPass_KeyDown);
             // 
@@ -132,6 +133,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

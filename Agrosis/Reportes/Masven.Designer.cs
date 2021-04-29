@@ -32,14 +32,27 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.Rpv1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Masven));
             this.DiarioEncBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DiezmasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DiarioDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Rpv1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.DiarioEncBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiezmasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiarioDetBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DiarioEncBindingSource
+            // 
+            this.DiarioEncBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioEnc);
+            // 
+            // DiezmasBindingSource
+            // 
+            this.DiezmasBindingSource.DataSource = typeof(Agrosis.Reportes.Diezmas);
+            // 
+            // DiarioDetBindingSource
+            // 
+            this.DiarioDetBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioDet);
             // 
             // Rpv1
             // 
@@ -59,18 +72,6 @@
             this.Rpv1.Size = new System.Drawing.Size(903, 336);
             this.Rpv1.TabIndex = 0;
             // 
-            // DiarioEncBindingSource
-            // 
-            this.DiarioEncBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioEnc);
-            // 
-            // DiezmasBindingSource
-            // 
-            this.DiezmasBindingSource.DataSource = typeof(Agrosis.Reportes.Diezmas);
-            // 
-            // DiarioDetBindingSource
-            // 
-            this.DiarioDetBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioDet);
-            // 
             // Masven
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,6 +79,7 @@
             this.ClientSize = new System.Drawing.Size(903, 336);
             this.Controls.Add(this.Rpv1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Masven";
             this.Text = "Mas vendidos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

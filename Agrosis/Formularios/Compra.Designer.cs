@@ -57,6 +57,7 @@
             this.Cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChkPrecio = new System.Windows.Forms.CheckBox();
+            this.btnAddProv = new System.Windows.Forms.Button();
             this.PanSup.SuspendLayout();
             this.PanInf.SuspendLayout();
             this.PanCent.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // PanSup
             // 
+            this.PanSup.Controls.Add(this.btnAddProv);
             this.PanSup.Controls.Add(this.label2);
             this.PanSup.Controls.Add(this.TxtTotalC);
             this.PanSup.Controls.Add(this.label1);
@@ -106,7 +108,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(432, 12);
+            this.label1.Location = new System.Drawing.Point(484, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 21);
             this.label1.TabIndex = 9;
@@ -116,7 +118,7 @@
             // TxtNumDoc
             // 
             this.TxtNumDoc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNumDoc.Location = new System.Drawing.Point(425, 39);
+            this.TxtNumDoc.Location = new System.Drawing.Point(505, 39);
             this.TxtNumDoc.Name = "TxtNumDoc";
             this.TxtNumDoc.Size = new System.Drawing.Size(121, 29);
             this.TxtNumDoc.TabIndex = 8;
@@ -129,7 +131,7 @@
             this.CboDoc.Items.AddRange(new object[] {
             "Factura",
             "Envio"});
-            this.CboDoc.Location = new System.Drawing.Point(227, 36);
+            this.CboDoc.Location = new System.Drawing.Point(273, 39);
             this.CboDoc.Name = "CboDoc";
             this.CboDoc.Size = new System.Drawing.Size(152, 29);
             this.CboDoc.TabIndex = 7;
@@ -138,7 +140,7 @@
             // 
             this.DtpComp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpComp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpComp.Location = new System.Drawing.Point(625, 39);
+            this.DtpComp.Location = new System.Drawing.Point(671, 39);
             this.DtpComp.Name = "DtpComp";
             this.DtpComp.Size = new System.Drawing.Size(175, 29);
             this.DtpComp.TabIndex = 6;
@@ -157,7 +159,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(233, 12);
+            this.label3.Location = new System.Drawing.Point(279, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 21);
             this.label3.TabIndex = 4;
@@ -167,7 +169,7 @@
             // 
             this.LblDate.AutoSize = true;
             this.LblDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDate.Location = new System.Drawing.Point(635, 12);
+            this.LblDate.Location = new System.Drawing.Point(681, 12);
             this.LblDate.Name = "LblDate";
             this.LblDate.Size = new System.Drawing.Size(54, 21);
             this.LblDate.TabIndex = 2;
@@ -322,6 +324,16 @@
             this.ChkPrecio.Text = "Modificar producto";
             this.ChkPrecio.UseVisualStyleBackColor = true;
             // 
+            // btnAddProv
+            // 
+            this.btnAddProv.Image = ((System.Drawing.Image)(resources.GetObject("btnAddProv.Image")));
+            this.btnAddProv.Location = new System.Drawing.Point(201, 39);
+            this.btnAddProv.Name = "btnAddProv";
+            this.btnAddProv.Size = new System.Drawing.Size(42, 29);
+            this.btnAddProv.TabIndex = 12;
+            this.btnAddProv.UseVisualStyleBackColor = true;
+            this.btnAddProv.Click += new System.EventHandler(this.btnAddProv_Click);
+            // 
             // Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -374,5 +386,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cad;
         private System.Windows.Forms.CheckBox ChkPrecio;
+        private System.Windows.Forms.Button btnAddProv;
     }
 }

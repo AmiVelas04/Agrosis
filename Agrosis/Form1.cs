@@ -26,6 +26,7 @@ namespace Agrosis
             this.Hide();
             Formularios.Login Inicio = new Formularios.Login();
             Inicio.Show();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

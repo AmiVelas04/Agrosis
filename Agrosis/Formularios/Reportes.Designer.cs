@@ -53,6 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.DtpGI = new System.Windows.Forms.DateTimePicker();
+            this.BtnCompras = new System.Windows.Forms.Button();
             this.PanSup.SuspendLayout();
             this.PanSder.SuspendLayout();
             this.GbxSemanal.SuspendLayout();
@@ -72,21 +73,22 @@
             this.PanSup.Location = new System.Drawing.Point(0, 0);
             this.PanSup.Margin = new System.Windows.Forms.Padding(4);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(1235, 229);
+            this.PanSup.Size = new System.Drawing.Size(1235, 357);
             this.PanSup.TabIndex = 0;
             // 
             // PanSder
             // 
             this.PanSder.Controls.Add(this.GbxSemanal);
             this.PanSder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanSder.Location = new System.Drawing.Point(430, 0);
+            this.PanSder.Location = new System.Drawing.Point(613, 0);
             this.PanSder.Margin = new System.Windows.Forms.Padding(4);
             this.PanSder.Name = "PanSder";
-            this.PanSder.Size = new System.Drawing.Size(805, 229);
+            this.PanSder.Size = new System.Drawing.Size(622, 357);
             this.PanSder.TabIndex = 1;
             // 
             // GbxSemanal
             // 
+            this.GbxSemanal.Controls.Add(this.BtnCompras);
             this.GbxSemanal.Controls.Add(this.BtnRepS);
             this.GbxSemanal.Controls.Add(this.DtpTf);
             this.GbxSemanal.Controls.Add(this.label2);
@@ -97,14 +99,14 @@
             this.GbxSemanal.Margin = new System.Windows.Forms.Padding(4);
             this.GbxSemanal.Name = "GbxSemanal";
             this.GbxSemanal.Padding = new System.Windows.Forms.Padding(4);
-            this.GbxSemanal.Size = new System.Drawing.Size(805, 229);
+            this.GbxSemanal.Size = new System.Drawing.Size(622, 357);
             this.GbxSemanal.TabIndex = 0;
             this.GbxSemanal.TabStop = false;
             this.GbxSemanal.Text = "Reporte de Totales";
             // 
             // BtnRepS
             // 
-            this.BtnRepS.Location = new System.Drawing.Point(141, 106);
+            this.BtnRepS.Location = new System.Drawing.Point(82, 120);
             this.BtnRepS.Margin = new System.Windows.Forms.Padding(4);
             this.BtnRepS.Name = "BtnRepS";
             this.BtnRepS.Size = new System.Drawing.Size(129, 52);
@@ -116,7 +118,7 @@
             // DtpTf
             // 
             this.DtpTf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpTf.Location = new System.Drawing.Point(223, 63);
+            this.DtpTf.Location = new System.Drawing.Point(417, 63);
             this.DtpTf.Margin = new System.Windows.Forms.Padding(4);
             this.DtpTf.Name = "DtpTf";
             this.DtpTf.Size = new System.Drawing.Size(136, 25);
@@ -125,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 37);
+            this.label2.Location = new System.Drawing.Point(426, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 17);
@@ -158,7 +160,7 @@
             this.PanSiz.Location = new System.Drawing.Point(0, 0);
             this.PanSiz.Margin = new System.Windows.Forms.Padding(4);
             this.PanSiz.Name = "PanSiz";
-            this.PanSiz.Size = new System.Drawing.Size(430, 229);
+            this.PanSiz.Size = new System.Drawing.Size(613, 357);
             this.PanSiz.TabIndex = 0;
             // 
             // GbxDiarios
@@ -171,14 +173,14 @@
             this.GbxDiarios.Margin = new System.Windows.Forms.Padding(4);
             this.GbxDiarios.Name = "GbxDiarios";
             this.GbxDiarios.Padding = new System.Windows.Forms.Padding(4);
-            this.GbxDiarios.Size = new System.Drawing.Size(430, 229);
+            this.GbxDiarios.Size = new System.Drawing.Size(613, 357);
             this.GbxDiarios.TabIndex = 0;
             this.GbxDiarios.TabStop = false;
             this.GbxDiarios.Text = "Reportes Diarios";
             // 
             // ReportDd
             // 
-            this.ReportDd.Location = new System.Drawing.Point(157, 142);
+            this.ReportDd.Location = new System.Drawing.Point(217, 142);
             this.ReportDd.Margin = new System.Windows.Forms.Padding(4);
             this.ReportDd.Name = "ReportDd";
             this.ReportDd.Size = new System.Drawing.Size(115, 64);
@@ -189,7 +191,7 @@
             // 
             // BtnRepD
             // 
-            this.BtnRepD.Location = new System.Drawing.Point(157, 83);
+            this.BtnRepD.Location = new System.Drawing.Point(217, 70);
             this.BtnRepD.Margin = new System.Windows.Forms.Padding(4);
             this.BtnRepD.Name = "BtnRepD";
             this.BtnRepD.Size = new System.Drawing.Size(115, 64);
@@ -200,7 +202,7 @@
             // 
             // DtpF1
             // 
-            this.DtpF1.Location = new System.Drawing.Point(66, 50);
+            this.DtpF1.Location = new System.Drawing.Point(146, 37);
             this.DtpF1.Margin = new System.Windows.Forms.Padding(4);
             this.DtpF1.Name = "DtpF1";
             this.DtpF1.Size = new System.Drawing.Size(288, 25);
@@ -210,9 +212,9 @@
             // 
             this.panel1.Controls.Add(this.Gbxproductos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 229);
+            this.panel1.Location = new System.Drawing.Point(0, 357);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 473);
+            this.panel1.Size = new System.Drawing.Size(610, 345);
             this.panel1.TabIndex = 1;
             // 
             // Gbxproductos
@@ -221,7 +223,7 @@
             this.Gbxproductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Gbxproductos.Location = new System.Drawing.Point(0, 0);
             this.Gbxproductos.Name = "Gbxproductos";
-            this.Gbxproductos.Size = new System.Drawing.Size(430, 473);
+            this.Gbxproductos.Size = new System.Drawing.Size(610, 345);
             this.Gbxproductos.TabIndex = 0;
             this.Gbxproductos.TabStop = false;
             this.Gbxproductos.Text = "Inventario";
@@ -240,9 +242,9 @@
             // 
             this.panel2.Controls.Add(this.GbxGanacias);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(430, 229);
+            this.panel2.Location = new System.Drawing.Point(610, 357);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(805, 473);
+            this.panel2.Size = new System.Drawing.Size(625, 345);
             this.panel2.TabIndex = 2;
             // 
             // GbxGanacias
@@ -257,14 +259,14 @@
             this.GbxGanacias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GbxGanacias.Location = new System.Drawing.Point(0, 0);
             this.GbxGanacias.Name = "GbxGanacias";
-            this.GbxGanacias.Size = new System.Drawing.Size(805, 473);
+            this.GbxGanacias.Size = new System.Drawing.Size(625, 345);
             this.GbxGanacias.TabIndex = 0;
             this.GbxGanacias.TabStop = false;
             this.GbxGanacias.Text = "Ganancias/Vendidos";
             // 
             // BtnVentas
             // 
-            this.BtnVentas.Location = new System.Drawing.Point(168, 94);
+            this.BtnVentas.Location = new System.Drawing.Point(271, 139);
             this.BtnVentas.Name = "BtnVentas";
             this.BtnVentas.Size = new System.Drawing.Size(91, 50);
             this.BtnVentas.TabIndex = 7;
@@ -274,7 +276,7 @@
             // 
             // BtnMasVen
             // 
-            this.BtnMasVen.Location = new System.Drawing.Point(290, 94);
+            this.BtnMasVen.Location = new System.Drawing.Point(393, 139);
             this.BtnMasVen.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMasVen.Name = "BtnMasVen";
             this.BtnMasVen.Size = new System.Drawing.Size(95, 50);
@@ -285,7 +287,7 @@
             // 
             // BtnGan
             // 
-            this.BtnGan.Location = new System.Drawing.Point(36, 94);
+            this.BtnGan.Location = new System.Drawing.Point(139, 139);
             this.BtnGan.Name = "BtnGan";
             this.BtnGan.Size = new System.Drawing.Size(94, 50);
             this.BtnGan.TabIndex = 4;
@@ -296,7 +298,7 @@
             // DtpGf
             // 
             this.DtpGf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpGf.Location = new System.Drawing.Point(235, 38);
+            this.DtpGf.Location = new System.Drawing.Point(338, 83);
             this.DtpGf.Name = "DtpGf";
             this.DtpGf.Size = new System.Drawing.Size(150, 25);
             this.DtpGf.TabIndex = 3;
@@ -304,7 +306,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(297, 18);
+            this.label4.Location = new System.Drawing.Point(417, 55);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 17);
             this.label4.TabIndex = 2;
@@ -313,7 +315,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 20);
+            this.label3.Location = new System.Drawing.Point(156, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 1;
@@ -322,10 +324,20 @@
             // DtpGI
             // 
             this.DtpGI.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpGI.Location = new System.Drawing.Point(26, 40);
+            this.DtpGI.Location = new System.Drawing.Point(129, 85);
             this.DtpGI.Name = "DtpGI";
             this.DtpGI.Size = new System.Drawing.Size(140, 25);
             this.DtpGI.TabIndex = 0;
+            // 
+            // BtnCompras
+            // 
+            this.BtnCompras.Location = new System.Drawing.Point(390, 120);
+            this.BtnCompras.Name = "BtnCompras";
+            this.BtnCompras.Size = new System.Drawing.Size(136, 52);
+            this.BtnCompras.TabIndex = 5;
+            this.BtnCompras.Text = "Ver compras";
+            this.BtnCompras.UseVisualStyleBackColor = true;
+            this.BtnCompras.Click += new System.EventHandler(this.BtnCompras_Click);
             // 
             // Reportes
             // 
@@ -383,5 +395,6 @@
         private System.Windows.Forms.DateTimePicker DtpGI;
         private System.Windows.Forms.Button BtnMasVen;
         private System.Windows.Forms.Button BtnVentas;
+        private System.Windows.Forms.Button BtnCompras;
     }
 }

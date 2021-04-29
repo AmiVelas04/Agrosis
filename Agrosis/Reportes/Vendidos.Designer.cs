@@ -31,12 +31,21 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.Rpv1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vendidos));
             this.DiarioDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DiarioEncBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Rpv1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.DiarioDetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiarioEncBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DiarioDetBindingSource
+            // 
+            this.DiarioDetBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioDet);
+            // 
+            // DiarioEncBindingSource
+            // 
+            this.DiarioEncBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioEnc);
             // 
             // Rpv1
             // 
@@ -53,14 +62,6 @@
             this.Rpv1.Size = new System.Drawing.Size(930, 320);
             this.Rpv1.TabIndex = 0;
             // 
-            // DiarioDetBindingSource
-            // 
-            this.DiarioDetBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioDet);
-            // 
-            // DiarioEncBindingSource
-            // 
-            this.DiarioEncBindingSource.DataSource = typeof(Agrosis.Reportes.DiarioEnc);
-            // 
             // Vendidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -68,6 +69,7 @@
             this.ClientSize = new System.Drawing.Size(930, 320);
             this.Controls.Add(this.Rpv1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Vendidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendidos";

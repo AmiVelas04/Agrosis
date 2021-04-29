@@ -27,7 +27,7 @@ namespace Agrosis.Formularios
         }
         private void addProd ()
         {
-            string[] datos = {TxtCod .Text,TxtNom.Text ,TxtDesc.Text,TxtMarca.Text,TxtCosto.Text ,TxtVenta.Text,Nud.Value .ToString (),DtpCad.Value.ToString ("yyyy/MM/dd"),NudPack .Value .ToString (),TxtPpack .Text  };
+            string[] datos = {TxtCod .Text,TxtNom.Text ,TxtDesc.Text,TxtMarca.Text,TxtCosto.Text ,TxtPrecio_M1.Text,TxtPrecio_M2.Text,TxtPrecio_V1.Text, TxtPrecio_V2.Text,Nud.Value .ToString (),DtpCad.Value.ToString ("yyyy/MM/dd") };
             if (prod.agregprod(datos))
             { MessageBox.Show("Producto ingresado Correctamente"); }
             else
@@ -37,7 +37,7 @@ namespace Agrosis.Formularios
         private void UpdProd()
         {
             
-            string[] datos = { TxtCod.Text, TxtNom.Text, TxtDesc.Text, TxtMarca.Text, TxtCosto.Text, TxtVenta.Text, Nud.Value.ToString(), DtpCad.Value.ToString("yyyy/MM/dd"), NudPack.Value.ToString(), TxtPpack.Text };
+            string[] datos = { TxtCod.Text, TxtNom.Text, TxtDesc.Text, TxtMarca.Text, TxtCosto.Text, TxtPrecio_M1.Text, TxtPrecio_M2.Text, TxtPrecio_V1.Text, TxtPrecio_V2.Text, Nud.Value.ToString(), DtpCad.Value.ToString("yyyy/MM/dd")};
             if (prod.actualprod (datos))
             { MessageBox.Show("Producto Actualizado"); }
             else
@@ -66,11 +66,14 @@ namespace Agrosis.Formularios
             TxtDesc.Text= datos.Rows[0][1].ToString();
             TxtMarca.Text= datos.Rows[0][2].ToString();
             TxtCosto.Text = datos.Rows[0][3].ToString();
-            TxtVenta.Text = datos.Rows[0][4].ToString();
+            TxtPrecio_M1.Text = datos.Rows[0][10].ToString();
+            TxtPrecio_M2.Text = datos.Rows[0][11].ToString();
+            TxtPrecio_V1.Text = datos.Rows[0][4].ToString();
+            TxtPrecio_V2.Text = datos.Rows[0][9].ToString();
             Nud.Value =decimal.Parse( datos.Rows[0][5].ToString());
             DtpCad.Value = DateTime.Parse(DateTime.Parse( datos.Rows[0][6].ToString()).ToString ("dd/MM/yyyyy"));
-            NudPack.Value = decimal.Parse(datos.Rows[0][7].ToString());
-            TxtPpack.Text = datos.Rows[0][8].ToString();
+            /*NudPack.Value = decimal.Parse(datos.Rows[0][7].ToString());
+            TxtPpack.Text = datos.Rows[0][8].ToString();*/
 
 
         }
@@ -101,6 +104,17 @@ namespace Agrosis.Formularios
             if (datos.Rows.Count > 0) { DgvDatos.DataSource = datos; }
             else { MessageBox.Show("No existe el producto buscado","No existe",MessageBoxButtons.OK,MessageBoxIcon.Exclamation); }
             
+        }
+
+        private void BuscarServ()
+        {
+            string nombre = TxtNom.Text;
+            string desc = TxtDesc.Text;
+            string marca = TxtMarca.Text;
+            DataTable datos = new DataTable();
+            datos = prod.Buscarprodnom(nombre, marca, desc);
+            if (datos.Rows.Count > 0) { DgvDatos.DataSource = datos; }
+            else { MessageBox.Show("No existe el producto buscado", "No existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
         }
 
         private void TxtCodp_KeyDown(object sender, KeyEventArgs e)
@@ -218,6 +232,20 @@ namespace Agrosis.Formularios
                 DtpCad.Visible = true;
                 DtpCad.Value = DateTime.Now;
             }
+        }
+
+        private void BtnServ_Click(object sender, EventArgs e)
+        {
+            Servicio serv = new Servicio();
+            serv.ShowDialog();
+        }
+
+        private void BtnBuscServ_Click(object sender, EventArgs e)
+        {
+            buscarnom();
+            EstiloFecha();
+            estiloFecha2();
+            
         }
     }
 }

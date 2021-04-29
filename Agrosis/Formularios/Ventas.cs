@@ -15,7 +15,9 @@ namespace Agrosis.Formularios
     {
         Clases.Producto prod = new Clases.Producto();
         Clases.Venta ven = new Clases.Venta();
+        Clases.Cliente clie = new Clases.Cliente();
         DataTable respaldo = new DataTable();
+
         decimal Refectivo;
 
         public Ventas()
@@ -28,6 +30,8 @@ namespace Agrosis.Formularios
             TxtCod.Focus();
             Ttinfo.SetToolTip(BtnImp, "Imprimir el ultimo comprobante");
             listadoprod();
+            ListarCli();
+            
         }
 
       
@@ -37,6 +41,7 @@ namespace Agrosis.Formularios
             if (e.KeyCode == Keys.Return) {
                 if (!String.IsNullOrEmpty(TxtCod.Text))
                 {
+                    
                     TxtCod.SelectionStart = 0;
                     TxtCod.SelectionLength = TxtCod.Text.Length;
                     TxtCod.Focus();
@@ -54,6 +59,7 @@ namespace Agrosis.Formularios
             if (prod.existeprod(codigo))
             {
                 if (NudCant.Value.ToString() == "0") { NudCant.Value = 1; }
+                int cantiprod= DgvProd.Rows.Count,canti=0;
                 if (DgvProd.Rows.Count <= 0)
                 {
                     DgvProd.Columns.Add("Cod", "Codigo");
@@ -66,9 +72,9 @@ namespace Agrosis.Formularios
                     DgvProd.Columns.Add("Paquete", "paquete");
                     DgvProd.Columns.Add("Preciop", "Preciop");
 
-                    DgvProd.Columns[0].Visible = false;
-                   // DgvProd.Columns[7].Visible = false;
-                   // DgvProd.Columns[8].Visible = false;
+                   DgvProd.Columns[0].Visible = false;
+                   DgvProd.Columns[7].Visible = false;
+                   DgvProd.Columns[8].Visible = false;
                 }
                 string Preciov1, Preciov2, Preciom1, Preciom2;
                 DataTable prods = new DataTable();
@@ -79,9 +85,14 @@ namespace Agrosis.Formularios
                 Preciom2 = prods.Rows[0][11].ToString();
 
                 decimal subtotal=decimal.Parse(NudCant .Value.ToString () )*decimal.Parse (prods.Rows[0][11].ToString());
-                
+                while (canti < cantiprod - 1)
+                {
+                    DgvProd.Rows[canti].Selected = false;
+                    canti++;
+                }
                 DgvProd.Rows.Add(codigo,prods.Rows[0][0].ToString(), prods.Rows[0][1].ToString(), prods.Rows[0][2].ToString(), prods.Rows[0][11].ToString(), NudCant.Value,subtotal, prods.Rows[0][7].ToString(), prods.Rows[0][8].ToString());
-                PrecioLst(Preciov1, Preciov2, Preciom1, Preciom2);
+               // DgvProd.Rows[cantiprod].Selected = true;
+                //PrecioLst(Preciov1, Preciov2, Preciom1, Preciom2);
                 calcTot();
                 contarprod();
                 TxtCod.Focus();
@@ -222,9 +233,9 @@ namespace Agrosis.Formularios
         private void PrepProd()
         {
             DataTable datos = new DataTable();
-            int total= DgvProd.Rows.Count;
-            int cont;
-            string descu = LblDesc.Text;
+            int total= DgvProd.Rows.Count,cont;
+            string descu = LblDesc.Text,cliente;
+
             if ( total> 0)
             {
                 datos.Columns.Add("Cod").DataType = Type.GetType("System.String");
@@ -253,7 +264,8 @@ namespace Agrosis.Formularios
                 decimal efect = decimal.Parse(TxtEfect.Text);
                 respaldo = datos;
                 Refectivo = decimal.Parse(TxtEfect.Text);
-                if (ven.generarv(datos, efect,"1", Main.id.ToString (),descu))
+                cliente = CboCli.SelectedValue.ToString() == "System.Data.DataRowView" ? "1" : CboCli.SelectedValue.ToString();
+                if (ven.generarv(datos, efect,cliente, Main.id.ToString (),descu))
                 {
                   
                     MessageBox.Show("Venta correcta");
@@ -318,11 +330,11 @@ namespace Agrosis.Formularios
             TxtEfect.Clear();
         }
 
-
         private void reimprimir()
         {
             int id = ven.idventa();
-            ven.PrintTicket(id, respaldo, Refectivo,LblDesc.Text );
+            //Revisar cliente
+            ven.PrintTicket(id, respaldo, Refectivo,LblDesc.Text,"1");
         }
       
         private void NudCant_KeyDown(object sender, KeyEventArgs e)
@@ -409,11 +421,14 @@ namespace Agrosis.Formularios
             if (DgvProd.Rows.Count > 0)
             {
                 int indice = DgvProd.CurrentRow.Index;
+                string cod;
                 //TxtNom.Text = DgvProd.Rows[indice].Cells[1].Value.ToString();
                 Txtdesc.Text = DgvProd.Rows[indice].Cells[2].Value.ToString();
                 TxtMarca.Text = DgvProd.Rows[indice].Cells[3].Value.ToString();
                 TxtPrecio .Text = DgvProd.Rows[indice].Cells[4].Value.ToString();
                 NudCant.Value = decimal.Parse(DgvProd.Rows[indice].Cells[5].Value.ToString ());
+                cod = DgvProd.Rows[indice].Cells[0].Value.ToString();
+                buscapre(cod);
             }
         }
 
@@ -497,7 +512,89 @@ namespace Agrosis.Formularios
             CboPrecio.Items.Add(p4);
             CboPrecio.SelectedIndex = 3;
         }
-       
 
+
+        private void buscapre(string cod)
+        {
+            DataTable datos = new DataTable();
+            int cont,indice=3;
+            datos = prod.buscaPre(cod);
+            if (datos.Rows.Count >= 1)
+            {
+                for (cont= 1;cont<=4;cont++)
+                {
+                    if (datos.Rows[0][cont].ToString() == DgvProd.Rows[DgvProd.CurrentRow.Index].Cells[4].Value.ToString())
+                    {
+                        indice = cont - 1;
+                        break;
+                    }
+                }
+                PrecioLst(datos.Rows[0][1].ToString(), datos.Rows[0][2].ToString(), datos.Rows[0][3].ToString(), datos.Rows[0][4].ToString());
+                CboPrecio.SelectedIndex = indice;
+            }
+        }
+
+ 
+
+
+        private void CboPrecio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int cont;
+            bool selecio = false;
+            for (cont = 0; cont < DgvProd.Rows.Count; cont++)
+            {
+                if (DgvProd.Rows[cont].Selected == true)
+                {
+                    selecio = true;
+                    break;
+                }
+            }
+            if (selecio) { 
+            cambiar_precio();
+          
+            }
+            calcTot();
+        }
+
+        private void cambiar_precio()
+        {
+            decimal precio,total;
+            int canti,fila;
+            if (DgvProd.Rows.Count>=1)
+            {
+                fila = DgvProd.CurrentRow.Index;
+              
+                    precio = decimal.Parse(CboPrecio.Text);
+                    canti = Int32.Parse(DgvProd.Rows[fila].Cells[5].Value.ToString());
+                    total = precio * canti;
+                    DgvProd.Rows[fila].Cells[4].Value = precio.ToString();
+                    DgvProd.Rows[fila].Cells[6].Value = total.ToString();
+
+            }
+        }
+
+        private void ListarCli()
+        {
+            int cant;
+            DataTable datos = new DataTable();
+            datos = clie.Listcliente();
+            cant = datos.Rows.Count;
+            CboCli.DataSource = datos;
+            CboCli.DisplayMember = "nombre";
+            CboCli.ValueMember = "cod";
+        }
+
+        private void CboCli_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CboCli.SelectedValue.ToString()!="System.Data.DataRowView")TxtNit.Text = clie.nit(CboCli.SelectedValue.ToString());
+        }
+
+        private void AddClie_Click(object sender, EventArgs e)
+        {
+            AddCliente incli = new AddCliente();
+            incli.ShowDialog();
+            ListarCli();
+        }
     }
 }

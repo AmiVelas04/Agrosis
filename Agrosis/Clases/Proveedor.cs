@@ -75,8 +75,24 @@ namespace Agrosis.Clases
             consulta = "select id_prov,nombre from proveedor";
             return buscar(consulta);
         }
+       
 
-
+        public void ingresoprov(string [] datos)
+        {
+            string consulta;
+            string id = (idprov() + 1).ToString();
+            consulta = "Insert into proveedor(id_prov,nombre,direccion,nit) values("+
+                id+",'"+datos[0]+"','"+datos[1]+"','"+datos[2]+"')";
+            if (consulta_gen(consulta))
+            {
+                MessageBox.Show("Ingreso Correcto de proveedor");
+            }
+            else
+            {
+                MessageBox.Show("Error al ingresar proveedor");
+            }
+        }
+        
 
 
     }

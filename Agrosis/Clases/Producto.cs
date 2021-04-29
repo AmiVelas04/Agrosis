@@ -66,11 +66,39 @@ namespace Agrosis.Clases
             
 
         }
+
+        public bool ExisteServ(string cod)
+        {
+            string consulta,ConsTip;
+            consulta = "Select count(*) from producto where id_prod='" + cod + "'";
+            if (Int32.Parse(buscar(consulta).Rows[0][0].ToString()) > 0)
+            {
+                DataTable datos = new DataTable();
+                ConsTip = "Select Tip_Prod from producto where id_prod='" + cod + "'";
+                datos = buscar(ConsTip);
+                if (datos.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("El Servicio que se desea ingresar ya existe", "Servicio ya existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe el mismo codigo asignado aun producto, verifique el codigo ingresado", "Codigo ya existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return true;
+                }
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool agregprod(string[] datos)
         {
             string consulta;
-            consulta = "Insert into producto (id_prod,nombre, descripcion,marca,precio_c,precio_m1,precio_m2,precio_v1,precio_v2,cantidad,fecha_cad) " +
-                "Values('"+datos [0] + "','"+ datos[1] + "','"+ datos[2] + "','"+ datos[3] + "'," + datos[4] + ","+ datos[5] + "," + datos[6] + "," + datos[7] +","+datos[8]+ "," + datos[9]+",'" +datos [10]+"')";
+            consulta = "Insert into producto (id_prod,nombre, descripcion,marca,precio_c,precio_m1,precio_m2,precio_v1,precio_v2,cantidad,fecha_cad,tip_prod) " +
+                "Values('"+datos [0] + "','"+ datos[1] + "','"+ datos[2] + "','"+ datos[3] + "'," + datos[4] + ","+ datos[5] + "," + datos[6] + "," + datos[7] +","+datos[8]+ "," + datos[9]+",'" +datos [10]+"',"+datos[11]+")";
             return consulta_gen(consulta);
 
         }
@@ -95,11 +123,21 @@ namespace Agrosis.Clases
         public DataTable Buscarprodnom(string nom,string marc, string desc)
         {
             string consulta;
-            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_v as Venta,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad, pack as Paquete,p_pack as PrecioxPaquete "+
+            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_m1 as Mayorista1,precio_m2 as Mayorista2,precio_v1 as Venta1,precio_v2 as Venta2,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad "/*, pack as Paquete,p_pack as PrecioxPaquete "*/ +
                         "from producto "+
-                        "where nombre like'%" + nom + "%' and marca like '%"+marc+"%' and descripcion like '%"+desc+"%'" ;
+                        "where nombre like'%" + nom + "%' and marca like '%"+marc+"%' and descripcion like '%"+desc+"%' and Tip_prod=0" ;
             return buscar(consulta);
         }
+
+        public DataTable BuscarServNom(string nom, string marc, string desc)
+        {
+            string consulta;
+            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_m1 as Mayorista1,precio_m2 as Mayorista2,precio_v1 as Venta1,precio_v2 as Venta2,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad "/*, pack as Paquete,p_pack as PrecioxPaquete "*/ +
+                        "from producto " +
+                        "where nombre like'%" + nom + "%' and marca like '%" + marc + "%' and descripcion like '%" + desc + "%' and Tip_prod=1";
+            return buscar(consulta);
+        }
+
         public bool DescontProd(string idprod, string cant)
         {
             string consultap,consultac;
@@ -310,6 +348,14 @@ namespace Agrosis.Clases
             consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_v as Precio,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad, pack as Paquete,p_pack as PrecioxPaquete " +
                         "from producto " +
                         "where nombre like'%" + nom + "%' or marca like '%" + nom + "%' or descripcion like '%" + nom + "%'";
+            return buscar(consulta);
+        }
+
+        public DataTable buscaPre(string cod)
+        {
+            DataTable datos = new DataTable();
+            string consulta;
+            consulta = "Select precio_c,precio_m1,precio_m2,precio_v1,precio_v2 from producto where id_prod= "+cod;
             return buscar(consulta);
         }
 

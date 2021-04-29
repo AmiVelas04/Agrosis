@@ -15,7 +15,8 @@ namespace Agrosis.Clases
         Producto prod = new Producto();
         Usuario usu = new Usuario();
         Caja caj = new Caja();
-        Cajon Regi = new Cajon();       
+        Cajon Regi = new Cajon();
+        Cliente Clie = new Cliente();
        
         #region "General"
         private DataTable buscar(string consulta)
@@ -104,7 +105,7 @@ namespace Agrosis.Clases
                       "values ("+codv+ ","+1+"," +cajero +",'"+ fecha+"',"+descu+")";
             if (consulta_gen(consulta))
             {
-                generardet(datos,codv,efect,cajero,descu);
+                generardet(datos,codv,efect,cajero,descu,cliente);
                 resp = true;
             }
             else
@@ -116,7 +117,7 @@ namespace Agrosis.Clases
             
         }
 
-        public bool generardet( DataTable datos, int venta,decimal efect,string cajero,string descu)
+        public bool generardet( DataTable datos, int venta,decimal efect,string cajero,string descu,string cli)
         {
             
             int cant= datos.Rows.Count,cont;
@@ -146,18 +147,23 @@ namespace Agrosis.Clases
             string[] opera = { "Ingreso","Venta No "+venta + ",Operado por "+atendio,total.ToString (),DateTime .Now.ToString ("yyyy/MM/dd hh:mm:ss"),"Activa"};
             caj.ingreope(opera);
             if (MessageBox.Show("¿Desea imprimir comprobante de venta?", "¿Imprimir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            { PrintTicket(venta, datos, efect, descu); }
+            { PrintTicket(venta, datos, efect, descu,cli); }
             else { Regi.AbreCajon();
                 Regi.ImprimirTicket();
             }
             return true;
         }
 
-        public void PrintTicket(int venta, DataTable datos,decimal efect,string descu)
+        public void PrintTicket(int venta, DataTable datos,decimal efect,string descu,string cli)
         {
             int cant, cont;
             decimal Neto;
             DataTable superior = new DataTable();
+            DataTable datoscli = new DataTable();
+            datoscli = Clie.datoscli(cli);
+            string Cli_titulo;
+            Cli_titulo = datoscli.Rows[0][0].ToString() + "          Nit:" + datoscli.Rows[0][1].ToString();
+            datoscli = Clie.datoscli(cli);
             Reportes.FacturaEnc Enca = new Reportes.FacturaEnc();
             superior = titulos(venta.ToString());
             Enca.ticket = venta;
@@ -165,6 +171,7 @@ namespace Agrosis.Clases
             string fetch =superior.Rows[0][1].ToString();
             Enca.fecha = superior.Rows[0][1].ToString();
             Enca.hora  = superior.Rows[0][2].ToString();
+            Enca.cliente = Cli_titulo;
         
             Enca.efectivo =  efect.ToString ();
             cant = datos.Rows.Count;

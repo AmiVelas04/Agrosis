@@ -122,7 +122,11 @@ namespace Agrosis.Formularios
                     datos[cont, 7] = Dgv1.Rows[cont].Cells["Precio4"].Value !=null ? Dgv1.Rows[cont].Cells["Precio4"].Value.ToString():"0";
                     datos[cont, 8] = Dgv1.Rows[cont].Cells["Precio5"].Value!=null? Dgv1.Rows[cont].Cells["Precio5"].Value.ToString():"0";
                     datos[cont,9]= Dgv1.Rows[cont].Cells["Cant"].Value != null ? Dgv1.Rows[cont].Cells["Cant"].Value.ToString() : "0";
-                    datos[cont, 10] = Dgv1.Rows[cont].Cells["Cad"].Value !=null ? Dgv1.Rows[cont].Cells["Cad"].Value.ToString(): "";
+                    datos[cont, 10] = Dgv1.Rows[cont].Cells["Cad"].Value !=null ? Dgv1.Rows[cont].Cells["Cad"].Value.ToString(): DateTime.Today.ToString("dd/MM/yyyy");
+                    DateTime fechacad;
+                    fechacad = DateTime.Parse(datos[cont,10]);
+                    datos[cont,10]=fechacad.ToString("yyyy/MM/dd");
+
                 }
 
                 string prove, cajero, fecha, docu=CboDoc.Text,numdoc;
@@ -152,6 +156,7 @@ namespace Agrosis.Formularios
                 string lol;
                 lol = Dgv1.Rows.GetRowState(0).ToString();
                 Dgv1.Rows.RemoveAt(0);
+                TxtTotalC.Text = "Q 0.00";
             }
         }
 
@@ -162,6 +167,7 @@ namespace Agrosis.Formularios
             CboProv.DataSource = datosprov;
             CboProv.ValueMember = "id_prov";
             CboProv.DisplayMember = "nombre";
+           
         }
 
         private void Compra_Load(object sender, EventArgs e)
@@ -173,6 +179,12 @@ namespace Agrosis.Formularios
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             Dgv1.Rows.Add(0,"","","",0,0,0,0,0,0,"");
+        }
+
+        private void btnAddProv_Click(object sender, EventArgs e)
+        {
+            AgregaProv aniadir = new AgregaProv();
+            aniadir.ShowDialog();
         }
     }
 }

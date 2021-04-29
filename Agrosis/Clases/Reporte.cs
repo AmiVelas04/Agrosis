@@ -170,5 +170,48 @@ namespace Agrosis.Clases
             Total.Show();
 
         }
+
+        public void reporteCompras(string fechai, string fechaf)
+        {
+            Reportes.CompraEnc Encabezado = new Reportes.CompraEnc();
+
+            DataTable datos = new DataTable();
+            fechai = fechai + " 00:00:00";
+            fechaf = fechaf + " 23:59:59";
+            int cant, cont;
+            string consulta = "SELECT com.ID_COMPRA, com.DOC,com.NUM_DOC,cd.ID_DET_COMP,pro.ID_PROD,pro.NOMBRE,pro.DESCRIPCION,pro.MARCA,cd.CANTIDAD,cd.COSTO,cd.TOTAL "+
+                              "from compra com "+
+                              "INNER JOIN compra_det cd ON cd.ID_COMP = com.ID_COMPRA "+
+                              "INNER JOIN producto pro ON pro.ID_PROD = cd.ID_PROD "+
+                              "WHERE com.FECHA >='"+fechai+"' AND com.FECHA <='"+fechaf+"'"+
+                              "ORDER BY cd.ID_DET_COMP";
+            datos = buscar(consulta);
+            cant = datos.Rows.Count;
+            Encabezado.Fechai = fechai;
+            Encabezado.Fechaf = fechaf;
+
+            for (cont= 0;cont<cant; cont++)
+            {
+                Reportes.CompraDet Deta = new Reportes.CompraDet();
+                decimal total;
+                Deta.compra = Int32.Parse(datos.Rows[cont][0].ToString());
+                Deta.doc= datos.Rows[cont][1].ToString();
+                Deta.Numdoc= Int32.Parse(datos.Rows[cont][2].ToString());
+                Deta.detalle= Int32.Parse(datos.Rows[cont][3].ToString());
+                Deta.cod = datos.Rows[cont][4].ToString(); 
+                Deta.prod= datos.Rows[cont][5].ToString() + " - "+ datos.Rows[cont][6].ToString() +" - " +datos.Rows[cont][7].ToString(); ;
+                Deta.cant = Int32.Parse(datos.Rows[cont][8].ToString());
+                Deta.precio=decimal.Parse(datos.Rows[cont][9].ToString());
+                total = Int32.Parse(datos.Rows[cont][8].ToString()) * decimal.Parse(datos.Rows[cont][9].ToString());
+                Deta.total = total;
+                Encabezado.Deta.Add(Deta);
+            }
+            Reportes.CompraRepo Repo = new Reportes.CompraRepo();
+            Repo.Titulo.Add(Encabezado);
+            Repo.Detalle = Encabezado.Deta;
+            Repo.Show();
+
+
+        }
     }
 }

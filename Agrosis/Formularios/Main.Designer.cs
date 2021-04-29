@@ -74,7 +74,7 @@
             this.BtnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCompra.Location = new System.Drawing.Point(3, 345);
             this.BtnCompra.Name = "BtnCompra";
-            this.BtnCompra.Size = new System.Drawing.Size(131, 35);
+            this.BtnCompra.Size = new System.Drawing.Size(173, 35);
             this.BtnCompra.TabIndex = 7;
             this.BtnCompra.Text = "Compras";
             this.BtnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -96,6 +96,7 @@
             this.BtnCod.Text = "Codigo";
             this.BtnCod.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCod.UseVisualStyleBackColor = true;
+            this.BtnCod.Visible = false;
             this.BtnCod.Click += new System.EventHandler(this.BtnCod_Click);
             // 
             // BtnCap
@@ -125,7 +126,7 @@
             this.BtnCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCaja.Location = new System.Drawing.Point(0, 294);
             this.BtnCaja.Name = "BtnCaja";
-            this.BtnCaja.Size = new System.Drawing.Size(131, 35);
+            this.BtnCaja.Size = new System.Drawing.Size(176, 35);
             this.BtnCaja.TabIndex = 4;
             this.BtnCaja.Text = "Caja";
             this.BtnCaja.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -142,7 +143,7 @@
             this.BtnREportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnREportes.Location = new System.Drawing.Point(-9, 237);
             this.BtnREportes.Name = "BtnREportes";
-            this.BtnREportes.Size = new System.Drawing.Size(140, 44);
+            this.BtnREportes.Size = new System.Drawing.Size(185, 44);
             this.BtnREportes.TabIndex = 3;
             this.BtnREportes.Text = "Reportes";
             this.BtnREportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -159,7 +160,7 @@
             this.BtnUsu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnUsu.Location = new System.Drawing.Point(-9, 183);
             this.BtnUsu.Name = "BtnUsu";
-            this.BtnUsu.Size = new System.Drawing.Size(140, 40);
+            this.BtnUsu.Size = new System.Drawing.Size(185, 40);
             this.BtnUsu.TabIndex = 2;
             this.BtnUsu.Text = "Usuarios";
             this.BtnUsu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -176,7 +177,7 @@
             this.BtnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProductos.Location = new System.Drawing.Point(-5, 128);
             this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(140, 40);
+            this.BtnProductos.Size = new System.Drawing.Size(181, 40);
             this.BtnProductos.TabIndex = 1;
             this.BtnProductos.Text = "Productos";
             this.BtnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,7 +194,7 @@
             this.BtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnVentas.Location = new System.Drawing.Point(-9, 66);
             this.BtnVentas.Name = "BtnVentas";
-            this.BtnVentas.Size = new System.Drawing.Size(140, 47);
+            this.BtnVentas.Size = new System.Drawing.Size(185, 47);
             this.BtnVentas.TabIndex = 0;
             this.BtnVentas.Text = "Ventas";
             this.BtnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -102,6 +102,13 @@ namespace Agrosis.Clases
                 }
                 else
                 {
+                    decimal CantAnt, CantAct, Total;
+                    DataTable produ = new DataTable();
+                    produ = prod.buscarprod(datos[cont, 0]);
+                    CantAnt = decimal.Parse(produ.Rows[0][5].ToString());
+                    CantAct = decimal.Parse(datos[cont,9]);
+                    Total = CantAct + CantAnt;
+                    prods[9] = Total.ToString();
                     res = prod.actualprod(prods);
                 }
             }
