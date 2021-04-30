@@ -27,8 +27,8 @@ namespace Agrosis.Formularios
 
         private void Respaldo_Load(object sender, EventArgs e)
         {
-       string cadena_conn = "server=192.168.1.102;  database=sanjosedb; user= SanJose; password=Sis_Jose_2021; port=3306; allow zero Datetime= true";
-            //string cadena_conn = "server=Localhost;  database=central; user= root; port=3306; allow zero Datetime= true";
+       //string cadena_conn = "server=192.168.1.102;  database=sanjosedb; user= SanJose; password=Sis_Jose_2021; port=3306; allow zero Datetime= true";
+       string cadena_conn = "server=Localhost;  database=Agro; user= root; password=Ami_1532; port=3306; allow zero Datetime= true";
 
             conn.ConnectionString = cadena_conn;
         }
@@ -69,7 +69,7 @@ namespace Agrosis.Formularios
                 TxtRuta.Text = carpeta.SelectedPath;
                 miCarpeta = carpeta.SelectedPath;
                 //miCarpeta =  miCarpeta .Replace("'\'","\\");
-                destino = miCarpeta.Trim() + "\\RespaldoBd_" + MiFecha + ".sql";
+                destino = miCarpeta.Trim() + "\\RespaldoBd_Pet_" + MiFecha + ".sql";
             }
         }
 

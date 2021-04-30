@@ -83,7 +83,6 @@ namespace Agrosis.Clases
                 }
                 else
                 {
-                   
                     return 2;
                 }
             }
@@ -301,7 +300,7 @@ namespace Agrosis.Clases
             fecha = fechaini.ToString("yyyy/MM/dd");
             fecha = fecha + " 00:00:00";
             consulta = "SELECT COUNT(*) FROM producto p " +
-                       "WHERE p.FECHA_CAD <= '" + fecha + "'";
+                       "WHERE p.FECHA_CAD <= '" + fecha + "' and Tip_prod=0";
             datos = buscar(consulta);
             cantidad = Int32.Parse(datos.Rows[0][0].ToString());
             return cantidad;
@@ -314,7 +313,7 @@ namespace Agrosis.Clases
             int cantidad;
             DataTable datos = new DataTable();
             consulta = "SELECT COUNT(*) FROM producto p " +
-                      "WHERE p.Cantidad <= " + 5;
+                      "WHERE p.Cantidad <= " + 5 + " and Tip_prod=0";
             datos = buscar(consulta);
             cantidad = Int32.Parse(datos.Rows[0][0].ToString());
             return cantidad;

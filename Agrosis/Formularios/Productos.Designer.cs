@@ -121,7 +121,7 @@
             this.TxtPrecio_V1.Margin = new System.Windows.Forms.Padding(5);
             this.TxtPrecio_V1.Name = "TxtPrecio_V1";
             this.TxtPrecio_V1.Size = new System.Drawing.Size(122, 25);
-            this.TxtPrecio_V1.TabIndex = 34;
+            this.TxtPrecio_V1.TabIndex = 12;
             this.TxtPrecio_V1.Text = "0";
             // 
             // label15
@@ -142,7 +142,7 @@
             this.TxtPrecio_M2.Margin = new System.Windows.Forms.Padding(5);
             this.TxtPrecio_M2.Name = "TxtPrecio_M2";
             this.TxtPrecio_M2.Size = new System.Drawing.Size(125, 25);
-            this.TxtPrecio_M2.TabIndex = 32;
+            this.TxtPrecio_M2.TabIndex = 11;
             this.TxtPrecio_M2.Text = "0";
             // 
             // label14
@@ -163,7 +163,7 @@
             this.TxtPrecio_M1.Margin = new System.Windows.Forms.Padding(5);
             this.TxtPrecio_M1.Name = "TxtPrecio_M1";
             this.TxtPrecio_M1.Size = new System.Drawing.Size(122, 25);
-            this.TxtPrecio_M1.TabIndex = 30;
+            this.TxtPrecio_M1.TabIndex = 10;
             this.TxtPrecio_M1.Text = "0";
             // 
             // label13
@@ -192,7 +192,8 @@
             this.NudPack.Location = new System.Drawing.Point(20, 591);
             this.NudPack.Name = "NudPack";
             this.NudPack.Size = new System.Drawing.Size(98, 29);
-            this.NudPack.TabIndex = 12;
+            this.NudPack.TabIndex = 35;
+            this.NudPack.TabStop = false;
             this.NudPack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NudPack.Visible = false;
             // 
@@ -203,7 +204,8 @@
             this.TxtPpack.Margin = new System.Windows.Forms.Padding(5);
             this.TxtPpack.Name = "TxtPpack";
             this.TxtPpack.Size = new System.Drawing.Size(114, 25);
-            this.TxtPpack.TabIndex = 13;
+            this.TxtPpack.TabIndex = 36;
+            this.TxtPpack.TabStop = false;
             this.TxtPpack.Text = "0";
             this.TxtPpack.Visible = false;
             // 
@@ -247,7 +249,7 @@
             this.DtpCad.Location = new System.Drawing.Point(113, 455);
             this.DtpCad.Margin = new System.Windows.Forms.Padding(5);
             this.DtpCad.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.DtpCad.MinDate = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
+            this.DtpCad.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.DtpCad.Name = "DtpCad";
             this.DtpCad.Size = new System.Drawing.Size(129, 25);
             this.DtpCad.TabIndex = 15;
@@ -285,7 +287,7 @@
             this.TxtPrecio_V2.Margin = new System.Windows.Forms.Padding(5);
             this.TxtPrecio_V2.Name = "TxtPrecio_V2";
             this.TxtPrecio_V2.Size = new System.Drawing.Size(125, 25);
-            this.TxtPrecio_V2.TabIndex = 11;
+            this.TxtPrecio_V2.TabIndex = 13;
             this.TxtPrecio_V2.Text = "0";
             // 
             // label6

@@ -19,17 +19,35 @@ namespace Agrosis.Formularios
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
-        {if (!prod.existeprod(TxtCod.Text))
-            { addProd(); }
+        {
+            if (prod.ExisteServ(TxtCod.Text) == 1)
+            {
+                MessageBox.Show("El codigo ya esta registrado como un servicio", "Ya asignado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (prod.ExisteServ(TxtCod.Text) == 2)
+            {
+                if (!prod.existeprod(TxtCod.Text))
+                { addProd(); }
+                else
+                {
+                    UpdProd();
+                }
+            }
             else
             {
-             UpdProd();
+                if (!prod.existeprod(TxtCod.Text))
+                { addProd(); }
+                else
+                {
+                    UpdProd();
+                }
             }
+            
             
         }
         private void addProd ()
         {
-            string[] datos = {TxtCod .Text,TxtNom.Text ,TxtDesc.Text,TxtMarca.Text,TxtCosto.Text ,TxtPrecio_M1.Text,TxtPrecio_M2.Text,TxtPrecio_V1.Text, TxtPrecio_V2.Text,Nud.Value .ToString (),DtpCad.Value.ToString ("yyyy/MM/dd") };
+            string[] datos = {TxtCod .Text,TxtNom.Text ,TxtDesc.Text,TxtMarca.Text,TxtCosto.Text ,TxtPrecio_M1.Text,TxtPrecio_M2.Text,TxtPrecio_V1.Text, TxtPrecio_V2.Text,Nud.Value .ToString (),DtpCad.Value.ToString ("yyyy/MM/dd"),"0" };
             if (prod.agregprod(datos))
             { MessageBox.Show("Producto ingresado Correctamente"); }
             else
@@ -38,7 +56,7 @@ namespace Agrosis.Formularios
 
         private void UpdProd()
         {
-            string[] datos = { TxtCod.Text, TxtNom.Text, TxtDesc.Text, TxtMarca.Text, TxtCosto.Text, TxtPrecio_M1.Text, TxtPrecio_M2.Text, TxtPrecio_V1.Text, TxtPrecio_V2.Text, Nud.Value.ToString(), DtpCad.Value.ToString("yyyy/MM/dd")};
+            string[] datos = { TxtCod.Text, TxtNom.Text, TxtDesc.Text, TxtMarca.Text, TxtCosto.Text, TxtPrecio_M1.Text, TxtPrecio_M2.Text, TxtPrecio_V1.Text, TxtPrecio_V2.Text, Nud.Value.ToString(), DtpCad.Value.ToString("yyyy/MM/dd"),"0"};
             if (prod.actualprod (datos))
             { MessageBox.Show("Producto Actualizado"); }
             else
@@ -226,7 +244,7 @@ namespace Agrosis.Formularios
             {
                 DtpCad.Visible = false;
                 DateTime fecha = DateTime.Now;
-                fecha = fecha.AddYears(3);
+                fecha = fecha.AddYears(15);
                 DtpCad.Value = fecha;
             }
             else
@@ -249,6 +267,19 @@ namespace Agrosis.Formularios
             estiloFecha2();
             BtnAdd.Enabled = false;
             
+        }
+
+        private void limpiar()
+        {
+            TxtCod.Clear();
+            TxtNom.Clear();
+            TxtDesc.Clear();
+            TxtMarca.Clear();
+            TxtPrecio_M1.Text = "0";
+            TxtPrecio_M2.Text = "0";
+            TxtPrecio_V1.Text = "0";
+            TxtPrecio_V2.Text = "0";
+            Nud.Value = 0;
         }
     }
 }
