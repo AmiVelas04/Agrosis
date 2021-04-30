@@ -31,6 +31,7 @@
             this.PanSup = new System.Windows.Forms.Panel();
             this.PanSder = new System.Windows.Forms.Panel();
             this.GbxSemanal = new System.Windows.Forms.GroupBox();
+            this.BtnCompras = new System.Windows.Forms.Button();
             this.BtnRepS = new System.Windows.Forms.Button();
             this.DtpTf = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.DtpGI = new System.Windows.Forms.DateTimePicker();
-            this.BtnCompras = new System.Windows.Forms.Button();
             this.PanSup.SuspendLayout();
             this.PanSder.SuspendLayout();
             this.GbxSemanal.SuspendLayout();
@@ -103,6 +103,16 @@
             this.GbxSemanal.TabIndex = 0;
             this.GbxSemanal.TabStop = false;
             this.GbxSemanal.Text = "Reporte de Totales";
+            // 
+            // BtnCompras
+            // 
+            this.BtnCompras.Location = new System.Drawing.Point(390, 120);
+            this.BtnCompras.Name = "BtnCompras";
+            this.BtnCompras.Size = new System.Drawing.Size(136, 52);
+            this.BtnCompras.TabIndex = 5;
+            this.BtnCompras.Text = "Ver compras";
+            this.BtnCompras.UseVisualStyleBackColor = true;
+            this.BtnCompras.Click += new System.EventHandler(this.BtnCompras_Click);
             // 
             // BtnRepS
             // 
@@ -329,21 +339,11 @@
             this.DtpGI.Size = new System.Drawing.Size(140, 25);
             this.DtpGI.TabIndex = 0;
             // 
-            // BtnCompras
-            // 
-            this.BtnCompras.Location = new System.Drawing.Point(390, 120);
-            this.BtnCompras.Name = "BtnCompras";
-            this.BtnCompras.Size = new System.Drawing.Size(136, 52);
-            this.BtnCompras.TabIndex = 5;
-            this.BtnCompras.Text = "Ver compras";
-            this.BtnCompras.UseVisualStyleBackColor = true;
-            this.BtnCompras.Click += new System.EventHandler(this.BtnCompras_Click);
-            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(154)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1235, 702);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

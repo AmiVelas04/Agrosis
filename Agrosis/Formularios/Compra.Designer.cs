@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compra));
             this.PanSup = new System.Windows.Forms.Panel();
+            this.btnAddProv = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtTotalC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.PanInf = new System.Windows.Forms.Panel();
             this.BtnSave = new System.Windows.Forms.Button();
             this.PanCent = new System.Windows.Forms.Panel();
+            this.ChkPrecio = new System.Windows.Forms.CheckBox();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.Dgv1 = new System.Windows.Forms.DataGridView();
             this.Cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,8 +58,7 @@
             this.Precio5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChkPrecio = new System.Windows.Forms.CheckBox();
-            this.btnAddProv = new System.Windows.Forms.Button();
+            this.BtnServ = new System.Windows.Forms.Button();
             this.PanSup.SuspendLayout();
             this.PanInf.SuspendLayout();
             this.PanCent.SuspendLayout();
@@ -82,6 +83,16 @@
             this.PanSup.Name = "PanSup";
             this.PanSup.Size = new System.Drawing.Size(1184, 103);
             this.PanSup.TabIndex = 0;
+            // 
+            // btnAddProv
+            // 
+            this.btnAddProv.Image = ((System.Drawing.Image)(resources.GetObject("btnAddProv.Image")));
+            this.btnAddProv.Location = new System.Drawing.Point(201, 39);
+            this.btnAddProv.Name = "btnAddProv";
+            this.btnAddProv.Size = new System.Drawing.Size(42, 29);
+            this.btnAddProv.TabIndex = 12;
+            this.btnAddProv.UseVisualStyleBackColor = true;
+            this.btnAddProv.Click += new System.EventHandler(this.btnAddProv_Click);
             // 
             // label2
             // 
@@ -187,6 +198,7 @@
             // 
             // PanInf
             // 
+            this.PanInf.Controls.Add(this.BtnServ);
             this.PanInf.Controls.Add(this.BtnSave);
             this.PanInf.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanInf.Location = new System.Drawing.Point(0, 623);
@@ -219,6 +231,16 @@
             this.PanCent.Name = "PanCent";
             this.PanCent.Size = new System.Drawing.Size(1184, 520);
             this.PanCent.TabIndex = 2;
+            // 
+            // ChkPrecio
+            // 
+            this.ChkPrecio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChkPrecio.Location = new System.Drawing.Point(1014, 89);
+            this.ChkPrecio.Name = "ChkPrecio";
+            this.ChkPrecio.Size = new System.Drawing.Size(158, 68);
+            this.ChkPrecio.TabIndex = 2;
+            this.ChkPrecio.Text = "Modificar producto";
+            this.ChkPrecio.UseVisualStyleBackColor = true;
             // 
             // BtnAdd
             // 
@@ -314,30 +336,25 @@
             this.Cad.HeaderText = "Fecha de caducidad";
             this.Cad.Name = "Cad";
             // 
-            // ChkPrecio
+            // BtnServ
             // 
-            this.ChkPrecio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChkPrecio.Location = new System.Drawing.Point(1014, 89);
-            this.ChkPrecio.Name = "ChkPrecio";
-            this.ChkPrecio.Size = new System.Drawing.Size(158, 68);
-            this.ChkPrecio.TabIndex = 2;
-            this.ChkPrecio.Text = "Modificar producto";
-            this.ChkPrecio.UseVisualStyleBackColor = true;
-            // 
-            // btnAddProv
-            // 
-            this.btnAddProv.Image = ((System.Drawing.Image)(resources.GetObject("btnAddProv.Image")));
-            this.btnAddProv.Location = new System.Drawing.Point(201, 39);
-            this.btnAddProv.Name = "btnAddProv";
-            this.btnAddProv.Size = new System.Drawing.Size(42, 29);
-            this.btnAddProv.TabIndex = 12;
-            this.btnAddProv.UseVisualStyleBackColor = true;
-            this.btnAddProv.Click += new System.EventHandler(this.btnAddProv_Click);
+            this.BtnServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnServ.Image")));
+            this.BtnServ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnServ.Location = new System.Drawing.Point(12, 6);
+            this.BtnServ.Name = "BtnServ";
+            this.BtnServ.Size = new System.Drawing.Size(186, 61);
+            this.BtnServ.TabIndex = 1;
+            this.BtnServ.Text = "Agregar Servicio";
+            this.BtnServ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnServ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnServ.UseVisualStyleBackColor = true;
             // 
             // Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 702);
             this.Controls.Add(this.PanCent);
             this.Controls.Add(this.PanInf);
@@ -387,5 +404,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cad;
         private System.Windows.Forms.CheckBox ChkPrecio;
         private System.Windows.Forms.Button btnAddProv;
+        private System.Windows.Forms.Button BtnServ;
     }
 }

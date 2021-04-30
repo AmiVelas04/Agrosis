@@ -59,6 +59,7 @@
             this.TxtCod = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PanAba = new System.Windows.Forms.Panel();
+            this.BtnBuscServ = new System.Windows.Forms.Button();
             this.BtnServ = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.PanCent = new System.Windows.Forms.Panel();
             this.DgvDatos = new System.Windows.Forms.DataGridView();
-            this.BtnBuscServ = new System.Windows.Forms.Button();
             this.PanDer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudPack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nud)).BeginInit();
@@ -430,6 +430,24 @@
             this.PanAba.Size = new System.Drawing.Size(846, 134);
             this.PanAba.TabIndex = 1;
             // 
+            // BtnBuscServ
+            // 
+            this.BtnBuscServ.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnBuscServ.FlatAppearance.BorderSize = 0;
+            this.BtnBuscServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscServ.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscServ.Image")));
+            this.BtnBuscServ.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnBuscServ.Location = new System.Drawing.Point(8, 71);
+            this.BtnBuscServ.Name = "BtnBuscServ";
+            this.BtnBuscServ.Size = new System.Drawing.Size(150, 60);
+            this.BtnBuscServ.TabIndex = 7;
+            this.BtnBuscServ.Text = "Buscar Servicio";
+            this.BtnBuscServ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBuscServ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnBuscServ.UseVisualStyleBackColor = false;
+            this.BtnBuscServ.Click += new System.EventHandler(this.BtnBuscServ_Click);
+            // 
             // BtnServ
             // 
             this.BtnServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnServ.Image")));
@@ -546,29 +564,11 @@
             this.DgvDatos.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvDatos_ColumnHeaderMouseClick);
             this.DgvDatos.ColumnSortModeChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DgvDatos_ColumnSortModeChanged);
             // 
-            // BtnBuscServ
-            // 
-            this.BtnBuscServ.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnBuscServ.FlatAppearance.BorderSize = 0;
-            this.BtnBuscServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscServ.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscServ.Image")));
-            this.BtnBuscServ.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnBuscServ.Location = new System.Drawing.Point(8, 71);
-            this.BtnBuscServ.Name = "BtnBuscServ";
-            this.BtnBuscServ.Size = new System.Drawing.Size(150, 60);
-            this.BtnBuscServ.TabIndex = 7;
-            this.BtnBuscServ.Text = "Buscar Servicio";
-            this.BtnBuscServ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnBuscServ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnBuscServ.UseVisualStyleBackColor = false;
-            this.BtnBuscServ.Click += new System.EventHandler(this.BtnBuscServ_Click);
-            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(247)))), ((int)(((byte)(154)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1188, 702);
             this.Controls.Add(this.PanCent);
             this.Controls.Add(this.PanAba);

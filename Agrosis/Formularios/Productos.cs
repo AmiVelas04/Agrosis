@@ -22,7 +22,9 @@ namespace Agrosis.Formularios
         {if (!prod.existeprod(TxtCod.Text))
             { addProd(); }
             else
-            { UpdProd(); }
+            {
+             UpdProd();
+            }
             
         }
         private void addProd ()
@@ -36,7 +38,6 @@ namespace Agrosis.Formularios
 
         private void UpdProd()
         {
-            
             string[] datos = { TxtCod.Text, TxtNom.Text, TxtDesc.Text, TxtMarca.Text, TxtCosto.Text, TxtPrecio_M1.Text, TxtPrecio_M2.Text, TxtPrecio_V1.Text, TxtPrecio_V2.Text, Nud.Value.ToString(), DtpCad.Value.ToString("yyyy/MM/dd")};
             if (prod.actualprod (datos))
             { MessageBox.Show("Producto Actualizado"); }
@@ -83,6 +84,7 @@ namespace Agrosis.Formularios
             buscarnom();
             EstiloFecha();
             estiloFecha2();
+            BtnAdd.Enabled = true;
             
         }
 
@@ -112,9 +114,9 @@ namespace Agrosis.Formularios
             string desc = TxtDesc.Text;
             string marca = TxtMarca.Text;
             DataTable datos = new DataTable();
-            datos = prod.Buscarprodnom(nombre, marca, desc);
+            datos = prod.BuscarServNom(nombre, marca, desc);
             if (datos.Rows.Count > 0) { DgvDatos.DataSource = datos; }
-            else { MessageBox.Show("No existe el producto buscado", "No existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else { MessageBox.Show("No existe el servicio buscado", "No existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
         }
 
         private void TxtCodp_KeyDown(object sender, KeyEventArgs e)
@@ -242,9 +244,10 @@ namespace Agrosis.Formularios
 
         private void BtnBuscServ_Click(object sender, EventArgs e)
         {
-            buscarnom();
+            BuscarServ();
             EstiloFecha();
             estiloFecha2();
+            BtnAdd.Enabled = false;
             
         }
     }

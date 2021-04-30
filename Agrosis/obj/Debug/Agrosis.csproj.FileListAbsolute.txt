@@ -58,3 +58,5 @@ D:\DevGeneral\Documentos\Sistemas\Agropecuaria\Agro\Agrosis\Agrosis\obj\Debug\Rd
 D:\DevGeneral\Documentos\Sistemas\Agropecuaria\Agro\Agrosis\Agrosis\obj\Debug\Agrosis.exe
 D:\DevGeneral\Documentos\Sistemas\Agropecuaria\Agro\Agrosis\Agrosis\obj\Debug\Agrosis.pdb
 D:\DevGeneral\Documentos\Sistemas\Agropecuaria\Agro\Agrosis\Agrosis\obj\Debug\Agrosis.csprojResolveAssemblyReference.cache
+D:\DevGeneral\Documentos\Sistemas\Agropecuaria\Agro\Agrosis\Agrosis\obj\Debug\Agrosis.Reportes.Mensual.resources
+D:\DevGeneral\Documentos\Sistemas\Agropecuaria\Agro\Agrosis\Agrosis\obj\Debug\Agrosis.Reportes.Semanal.resources

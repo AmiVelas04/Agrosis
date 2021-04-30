@@ -67,7 +67,7 @@ namespace Agrosis.Clases
 
         }
 
-        public bool ExisteServ(string cod)
+        public int ExisteServ(string cod)
         {
             string consulta,ConsTip;
             consulta = "Select count(*) from producto where id_prod='" + cod + "'";
@@ -78,19 +78,18 @@ namespace Agrosis.Clases
                 datos = buscar(ConsTip);
                 if (datos.Rows[0][0].ToString() == "1")
                 {
-                    MessageBox.Show("El Servicio que se desea ingresar ya existe", "Servicio ya existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return true;
+                    //MessageBox.Show("El Servicio que se desea ingresar ya existe", "Servicio ya existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return 1;
                 }
                 else
                 {
-                    MessageBox.Show("Ya existe el mismo codigo asignado aun producto, verifique el codigo ingresado", "Codigo ya existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return true;
+                   
+                    return 2;
                 }
-
             }
             else
             {
-                return false;
+                return 0;
             }
         }
 
@@ -123,7 +122,7 @@ namespace Agrosis.Clases
         public DataTable Buscarprodnom(string nom,string marc, string desc)
         {
             string consulta;
-            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_m1 as Mayorista1,precio_m2 as Mayorista2,precio_v1 as Venta1,precio_v2 as Venta2,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad "/*, pack as Paquete,p_pack as PrecioxPaquete "*/ +
+            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_m1 as Mayorista1,precio_m2 as Mayorista2,precio_v1 as Venta1,precio_v2 as Venta2,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad,TIP_PROD as Tipo "/*, pack as Paquete,p_pack as PrecioxPaquete "*/ +
                         "from producto "+
                         "where nombre like'%" + nom + "%' and marca like '%"+marc+"%' and descripcion like '%"+desc+"%' and Tip_prod=0" ;
             return buscar(consulta);
@@ -132,7 +131,7 @@ namespace Agrosis.Clases
         public DataTable BuscarServNom(string nom, string marc, string desc)
         {
             string consulta;
-            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_m1 as Mayorista1,precio_m2 as Mayorista2,precio_v1 as Venta1,precio_v2 as Venta2,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad "/*, pack as Paquete,p_pack as PrecioxPaquete "*/ +
+            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_m1 as Mayorista1,precio_m2 as Mayorista2,precio_v1 as Venta1,precio_v2 as Venta2 "/*,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad "||separador||, pack as Paquete,p_pack as PrecioxPaquete "*/ +
                         "from producto " +
                         "where nombre like'%" + nom + "%' and marca like '%" + marc + "%' and descripcion like '%" + desc + "%' and Tip_prod=1";
             return buscar(consulta);

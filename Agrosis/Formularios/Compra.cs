@@ -109,7 +109,7 @@ namespace Agrosis.Formularios
             if (cantP >= 0)
             {
                 int cont;
-                string[,] datos = new string[cantP, 11];
+                string[,] datos = new string[cantP, 12];
                 for (cont= 0; cont<cantP;cont++)
                 {
                     datos[cont, 0] = Dgv1.Rows[cont].Cells["Cod"].Value!=null ? Dgv1.Rows[cont].Cells["Cod"].Value.ToString() : "";
@@ -126,6 +126,7 @@ namespace Agrosis.Formularios
                     DateTime fechacad;
                     fechacad = DateTime.Parse(datos[cont,10]);
                     datos[cont,10]=fechacad.ToString("yyyy/MM/dd");
+                    datos[cont, 11] = "0";
 
                 }
 

@@ -49,7 +49,7 @@
             // 
             // PanLat
             // 
-            this.PanLat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(157)))), ((int)(((byte)(54)))));
+            this.PanLat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(226)))));
             this.PanLat.Controls.Add(this.BtnCompra);
             this.PanLat.Controls.Add(this.BtnCod);
             this.PanLat.Controls.Add(this.BtnCap);
@@ -203,7 +203,7 @@
             // 
             // PanSup
             // 
-            this.PanSup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(189)))), ((int)(((byte)(79)))));
+            this.PanSup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(223)))), ((int)(((byte)(1)))));
             this.PanSup.Controls.Add(this.BtnMin);
             this.PanSup.Controls.Add(this.BtnCerrar);
             this.PanSup.Controls.Add(this.LblUsu);
