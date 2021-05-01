@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compra));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanSup = new System.Windows.Forms.Panel();
             this.btnAddProv = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,9 +63,13 @@
             this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PorcentM1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PorcentM2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PorcentVenta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PorcentV2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -225,7 +239,7 @@
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
             this.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSave.Location = new System.Drawing.Point(889, 15);
+            this.BtnSave.Location = new System.Drawing.Point(889, 6);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(197, 61);
             this.BtnSave.TabIndex = 0;
@@ -280,9 +294,13 @@
             this.Desc,
             this.Marc,
             this.Precio1,
+            this.PorcentM1,
             this.Precio2,
+            this.PorcentM2,
             this.Precio3,
+            this.PorcentVenta1,
             this.Precio4,
+            this.PorcentV2,
             this.Precio5,
             this.Cant,
             this.Cad});
@@ -317,31 +335,74 @@
             // 
             // Precio1
             // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Precio1.DefaultCellStyle = dataGridViewCellStyle11;
             this.Precio1.HeaderText = "Costo";
             this.Precio1.Name = "Precio1";
             // 
+            // PorcentM1
+            // 
+            this.PorcentM1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PorcentM1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.PorcentM1.HeaderText = "% Mayorista 1";
+            this.PorcentM1.Name = "PorcentM1";
+            this.PorcentM1.Width = 109;
+            // 
             // Precio2
             // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Precio2.DefaultCellStyle = dataGridViewCellStyle13;
             this.Precio2.HeaderText = "Mayorista 1";
             this.Precio2.Name = "Precio2";
             // 
+            // PorcentM2
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PorcentM2.DefaultCellStyle = dataGridViewCellStyle14;
+            this.PorcentM2.HeaderText = "% Mayorista 2";
+            this.PorcentM2.Name = "PorcentM2";
+            this.PorcentM2.Width = 110;
+            // 
             // Precio3
             // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Precio3.DefaultCellStyle = dataGridViewCellStyle15;
             this.Precio3.HeaderText = "Mayorista 2";
             this.Precio3.Name = "Precio3";
             // 
+            // PorcentVenta1
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PorcentVenta1.DefaultCellStyle = dataGridViewCellStyle16;
+            this.PorcentVenta1.HeaderText = "% Venta 1";
+            this.PorcentVenta1.Name = "PorcentVenta1";
+            // 
             // Precio4
             // 
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Precio4.DefaultCellStyle = dataGridViewCellStyle17;
             this.Precio4.HeaderText = "Venta 1";
             this.Precio4.Name = "Precio4";
             // 
+            // PorcentV2
+            // 
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PorcentV2.DefaultCellStyle = dataGridViewCellStyle18;
+            this.PorcentV2.HeaderText = "% Venta 2";
+            this.PorcentV2.Name = "PorcentV2";
+            // 
             // Precio5
             // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Precio5.DefaultCellStyle = dataGridViewCellStyle19;
             this.Precio5.HeaderText = "Venta 2";
             this.Precio5.Name = "Precio5";
             // 
             // Cant
             // 
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Cant.DefaultCellStyle = dataGridViewCellStyle20;
             this.Cant.HeaderText = "Cantidad";
             this.Cant.Name = "Cant";
             // 
@@ -391,19 +452,23 @@
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtTotalC;
+        private System.Windows.Forms.CheckBox ChkPrecio;
+        private System.Windows.Forms.Button btnAddProv;
+        private System.Windows.Forms.Button BtnServ;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PorcentM1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PorcentM2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PorcentVenta1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PorcentV2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cad;
-        private System.Windows.Forms.CheckBox ChkPrecio;
-        private System.Windows.Forms.Button btnAddProv;
-        private System.Windows.Forms.Button BtnServ;
     }
 }

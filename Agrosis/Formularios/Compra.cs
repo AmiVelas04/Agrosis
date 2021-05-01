@@ -54,12 +54,16 @@ namespace Agrosis.Formularios
                         Dgv1.Rows[fila].Cells[2].Value = prods.Rows[0][1].ToString();
                         Dgv1.Rows[fila].Cells[3].Value = prods.Rows[0][2].ToString();
                         Dgv1.Rows[fila].Cells[4].Value = prods.Rows[0][3].ToString();
-                        Dgv1.Rows[fila].Cells[5].Value = prods.Rows[0][10].ToString();
-                        Dgv1.Rows[fila].Cells[6].Value = prods.Rows[0][11].ToString();
-                        Dgv1.Rows[fila].Cells[7].Value = prods.Rows[0][4].ToString();
-                        Dgv1.Rows[fila].Cells[8].Value = prods.Rows[0][9].ToString();
-                        if (Dgv1.Rows[fila].Cells[9].Value == null) Dgv1.Rows[fila].Cells[9].Value = 0;
-                        Dgv1.Rows[fila].Cells[10].Value = prods.Rows[0][6].ToString();
+
+                        Dgv1.Rows[fila].Cells[6].Value = prods.Rows[0][10].ToString();
+
+                        Dgv1.Rows[fila].Cells[8].Value = prods.Rows[0][11].ToString();
+
+                        Dgv1.Rows[fila].Cells[10].Value = prods.Rows[0][4].ToString();
+
+                        Dgv1.Rows[fila].Cells[12].Value = prods.Rows[0][9].ToString();
+                        if (Dgv1.Rows[fila].Cells[13].Value == null) Dgv1.Rows[fila].Cells[9].Value = 0;
+                        Dgv1.Rows[fila].Cells[14].Value = prods.Rows[0][6].ToString();
                     }
                 }
             }
@@ -76,7 +80,7 @@ namespace Agrosis.Formularios
             {
                 decimal cant, precio;
                 cant = Dgv1.Rows[cont].Cells[4].Value != null ? decimal.Parse(Dgv1.Rows[cont].Cells[4].Value.ToString()) : 0;
-                precio = Dgv1.Rows[cont].Cells[9].Value != null ? decimal.Parse(Dgv1.Rows[cont].Cells[9].Value.ToString()) : 0;
+                precio = Dgv1.Rows[cont].Cells[13].Value != null ? decimal.Parse(Dgv1.Rows[cont].Cells[13].Value.ToString()) : 0;
                 TotalC += (cant*precio);
             }
             TxtTotalC.Text = "Q." + TotalC.ToString("###,###,###.##");
@@ -85,6 +89,7 @@ namespace Agrosis.Formularios
         private void Dgv1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             mostrarDatos();
+            CalcPorcent();
             sumtotal();
         }
 
@@ -186,6 +191,58 @@ namespace Agrosis.Formularios
         {
             AgregaProv aniadir = new AgregaProv();
             aniadir.ShowDialog();
+        }
+
+        private void CalcPorcent()
+        {
+            int indice,cant,cont;
+            cant = Dgv1.Rows.Count;
+            if (cant > 0)
+            {
+                indice = Dgv1.CurrentRow.Index;
+                //calculo mayorista 1
+                if (Dgv1.Rows[indice].Cells[4].Value != null && Dgv1.Rows[indice].Cells[5].Value != null && (Dgv1.Rows[indice].Cells[6].Value == null || Dgv1.Rows[indice].Cells[6].Value.ToString() == "0" || Dgv1.Rows[indice].Cells[6].Value.ToString() == Dgv1.Rows[indice].Cells[4].Value.ToString()) )
+                {
+                    decimal costo, procent,totpercent=0;
+                    costo = decimal.Parse(Dgv1.Rows[indice].Cells[4].Value.ToString());
+                    procent= decimal.Parse(Dgv1.Rows[indice].Cells[5].Value.ToString());
+                    totpercent = costo +(costo * procent / 100);
+                    Dgv1.Rows[indice].Cells[6].Value = totpercent;
+                }
+
+                //calculo mayorista 2
+                if (Dgv1.Rows[indice].Cells[4].Value != null && Dgv1.Rows[indice].Cells[7].Value != null && (Dgv1.Rows[indice].Cells[8].Value == null || Dgv1.Rows[indice].Cells[8].Value.ToString() == "0" || Dgv1.Rows[indice].Cells[8].Value.ToString() == Dgv1.Rows[indice].Cells[4].Value.ToString()))
+                {
+                    decimal costo, procent, totpercent = 0;
+                    costo = decimal.Parse(Dgv1.Rows[indice].Cells[4].Value.ToString());
+                    procent = decimal.Parse(Dgv1.Rows[indice].Cells[7].Value.ToString());
+                    totpercent = costo + (costo * procent / 100);
+                    Dgv1.Rows[indice].Cells[8].Value = totpercent;
+                }
+
+                //calculo Valor 1
+                if (Dgv1.Rows[indice].Cells[4].Value != null && Dgv1.Rows[indice].Cells[9].Value != null && (Dgv1.Rows[indice].Cells[10].Value == null || Dgv1.Rows[indice].Cells[10].Value.ToString() == "0" || Dgv1.Rows[indice].Cells[10].Value.ToString() == Dgv1.Rows[indice].Cells[4].Value.ToString()))
+                {
+                    decimal costo, procent, totpercent = 0;
+                    costo = decimal.Parse(Dgv1.Rows[indice].Cells[4].Value.ToString());
+                    procent = decimal.Parse(Dgv1.Rows[indice].Cells[9].Value.ToString());
+                    totpercent = costo + (costo * procent / 100);
+                    Dgv1.Rows[indice].Cells[10].Value = totpercent;
+                }
+
+                //calculo Valor 2
+                if (Dgv1.Rows[indice].Cells[4].Value != null && Dgv1.Rows[indice].Cells[11].Value != null && (Dgv1.Rows[indice].Cells[12].Value == null || Dgv1.Rows[indice].Cells[12].Value.ToString() == "0" || Dgv1.Rows[indice].Cells[12].Value.ToString() == Dgv1.Rows[indice].Cells[4].Value.ToString()))
+                {
+                    decimal costo, procent, totpercent = 0;
+                    costo = decimal.Parse(Dgv1.Rows[indice].Cells[4].Value.ToString());
+                    procent = decimal.Parse(Dgv1.Rows[indice].Cells[11].Value.ToString());
+                    totpercent = costo + (costo * procent / 100);
+                    Dgv1.Rows[indice].Cells[12].Value = totpercent;
+                }
+
+
+            }
+            
         }
     }
 }

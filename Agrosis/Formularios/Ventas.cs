@@ -84,13 +84,13 @@ namespace Agrosis.Formularios
                 Preciom1 = prods.Rows[0][10].ToString();
                 Preciom2 = prods.Rows[0][11].ToString();
 
-                decimal subtotal=decimal.Parse(NudCant .Value.ToString () )*decimal.Parse (prods.Rows[0][11].ToString());
+                decimal subtotal=decimal.Parse(NudCant .Value.ToString () )*decimal.Parse (prods.Rows[0][9].ToString());
                 while (canti < cantiprod - 1)
                 {
                     DgvProd.Rows[canti].Selected = false;
                     canti++;
                 }
-                DgvProd.Rows.Add(codigo,prods.Rows[0][0].ToString(), prods.Rows[0][1].ToString(), prods.Rows[0][2].ToString(), prods.Rows[0][11].ToString(), NudCant.Value,subtotal, prods.Rows[0][7].ToString(), prods.Rows[0][8].ToString());
+                DgvProd.Rows.Add(codigo,prods.Rows[0][0].ToString(), prods.Rows[0][1].ToString(), prods.Rows[0][2].ToString(), prods.Rows[0][9].ToString(), NudCant.Value,subtotal, prods.Rows[0][7].ToString(), prods.Rows[0][8].ToString());
                // DgvProd.Rows[cantiprod].Selected = true;
                 //PrecioLst(Preciov1, Preciov2, Preciom1, Preciom2);
                 calcTot();

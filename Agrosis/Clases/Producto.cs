@@ -343,7 +343,7 @@ namespace Agrosis.Clases
         public DataTable BuscaRapProd(string nom)
         {
             string consulta;
-            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_c as Costo,precio_v as Precio,Cantidad,Date_format(fecha_cad,'%d-%m-%y')as Caducidad, pack as Paquete,p_pack as PrecioxPaquete " +
+            consulta = "Select id_prod as Codigo,Nombre,Descripcion,Marca,precio_v2 as Precio,Date_format(fecha_cad,'%d-%m-%y')as Caducidad " +
                         "from producto " +
                         "where nombre like'%" + nom + "%' or marca like '%" + nom + "%' or descripcion like '%" + nom + "%'";
             return buscar(consulta);

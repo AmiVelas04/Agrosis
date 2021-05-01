@@ -27,10 +27,6 @@ namespace Agrosis.Formularios
             datos = prod.BuscaRapProd(nombre);
             if (datos.Rows.Count > 0) {
                 DgvDatos.DataSource = datos;
-                DgvDatos.Columns[4].Visible = false;
-                DgvDatos.Columns[6].Visible = false;
-                DgvDatos.Columns[8].Visible = false;
-                DgvDatos.Columns[9].Visible = false;
             }
             else { MessageBox.Show("No existe el producto buscado", "No existe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
 

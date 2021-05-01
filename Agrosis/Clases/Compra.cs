@@ -127,7 +127,7 @@ namespace Agrosis.Clases
             idc = (idcompra()+1).ToString();
             totalp = prods.Length / 11;
             ConsComp = "insert into compra(id_compra,id_prov,fecha,id_caj,doc,num_doc) values(" +
-                    idc + "," + prov + ",'" + fecha + "'," + cajero +",'"+doc+"',"+numdoc+ ")";
+                    idc + "," + prov + ",'" + fecha + "'," + cajero +",'"+doc+"','"+numdoc+ "')";
             if (consulta_gen(ConsComp))
             {
                 for (cont = 0; cont < totalp; cont++)
