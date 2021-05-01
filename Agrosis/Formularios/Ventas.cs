@@ -131,7 +131,7 @@ namespace Agrosis.Formularios
                 int Tprod =0;
 
                 //producto cuando existe precio de paquete
-                if (estado && int.Parse (DgvProd.Rows[cont].Cells[7].Value.ToString())>0) {
+               /* if (estado && int.Parse (DgvProd.Rows[cont].Cells[7].Value.ToString())>0) {
                     
                     for (j = 0; j < cant; j++)
                     {   if (DgvProd.Rows[cont].Cells[0].Value.ToString() == DgvProd.Rows[j].Cells[0].Value.ToString())                            Tprod += int.Parse(DgvProd.Rows[j].Cells[5].Value.ToString());
@@ -144,22 +144,22 @@ namespace Agrosis.Formularios
                     tpack = packente / paquete;
                     tot = Tprod * decimal.Parse(DgvProd.Rows[cont].Cells[4].Value.ToString());
                     descuento = (packente * decimal.Parse(DgvProd.Rows[cont].Cells[4].Value.ToString())) - (tpack * decimal.Parse(DgvProd.Rows[cont].Cells[8].Value.ToString()));
-                }
+                }*/
 
                 //Producto cuando no existe precio de paquete
-                if (estado && int.Parse(DgvProd.Rows[cont].Cells[7].Value.ToString()) == 0)
-                {
+                //if (estado /*&& int.Parse(DgvProd.Rows[cont].Cells[7].Value.ToString()) == 0*/)
+               // {
 
-                    for (j = 0; j < cant; j++)
-                    {
-                        if (DgvProd.Rows[cont].Cells[0].Value.ToString() == DgvProd.Rows[j].Cells[0].Value.ToString()) Tprod += int.Parse(DgvProd.Rows[j].Cells[5].Value.ToString());
-                    }
+                  //  for (j = 0; j < cant; j++)
+                  //  {
+                       /* if (DgvProd.Rows[cont].Cells[0].Value.ToString() == DgvProd.Rows[j].Cells[0].Value.ToString())*/ Tprod = int.Parse(DgvProd.Rows[cont].Cells[5].Value.ToString());
+                    //}
                     descuento = 0;
-                    int paquete = int.Parse(DgvProd.Rows[cont].Cells[7].Value.ToString());
-                    decimal pPack = decimal.Parse(DgvProd.Rows[cont].Cells[8].Value.ToString());
+                    //int paquete = int.Parse(DgvProd.Rows[cont].Cells[7].Value.ToString());
+                   // decimal pPack = decimal.Parse(DgvProd.Rows[cont].Cells[8].Value.ToString());
                     tot = Tprod * decimal.Parse(DgvProd.Rows[cont].Cells[4].Value.ToString());
                    
-                }
+              //  }
                 subtotal += tot;
                 subtotal -= descuento ;
                 desc += descuento;
@@ -547,12 +547,13 @@ namespace Agrosis.Formularios
                 if (DgvProd.Rows[cont].Selected == true)
                 {
                     selecio = true;
+                    
                     break;
                 }
             }
             if (selecio) { 
             cambiar_precio();
-          
+                calcTot();
             }
             calcTot();
         }

@@ -42,6 +42,7 @@
             this.LblDate = new System.Windows.Forms.Label();
             this.LblProv = new System.Windows.Forms.Label();
             this.PanInf = new System.Windows.Forms.Panel();
+            this.BtnServ = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.PanCent = new System.Windows.Forms.Panel();
             this.ChkPrecio = new System.Windows.Forms.CheckBox();
@@ -58,7 +59,6 @@
             this.Precio5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnServ = new System.Windows.Forms.Button();
             this.PanSup.SuspendLayout();
             this.PanInf.SuspendLayout();
             this.PanCent.SuspendLayout();
@@ -81,7 +81,7 @@
             this.PanSup.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanSup.Location = new System.Drawing.Point(0, 0);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(1184, 103);
+            this.PanSup.Size = new System.Drawing.Size(1098, 103);
             this.PanSup.TabIndex = 0;
             // 
             // btnAddProv
@@ -98,7 +98,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1028, 9);
+            this.label2.Location = new System.Drawing.Point(942, 2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 25);
             this.label2.TabIndex = 11;
@@ -108,7 +108,7 @@
             // 
             this.TxtTotalC.Enabled = false;
             this.TxtTotalC.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotalC.Location = new System.Drawing.Point(961, 36);
+            this.TxtTotalC.Location = new System.Drawing.Point(875, 29);
             this.TxtTotalC.Multiline = true;
             this.TxtTotalC.Name = "TxtTotalC";
             this.TxtTotalC.Size = new System.Drawing.Size(211, 51);
@@ -203,15 +203,29 @@
             this.PanInf.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanInf.Location = new System.Drawing.Point(0, 623);
             this.PanInf.Name = "PanInf";
-            this.PanInf.Size = new System.Drawing.Size(1184, 79);
+            this.PanInf.Size = new System.Drawing.Size(1098, 79);
             this.PanInf.TabIndex = 1;
+            // 
+            // BtnServ
+            // 
+            this.BtnServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnServ.Image")));
+            this.BtnServ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnServ.Location = new System.Drawing.Point(12, 6);
+            this.BtnServ.Name = "BtnServ";
+            this.BtnServ.Size = new System.Drawing.Size(186, 61);
+            this.BtnServ.TabIndex = 1;
+            this.BtnServ.Text = "Agregar Servicio";
+            this.BtnServ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnServ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnServ.UseVisualStyleBackColor = true;
             // 
             // BtnSave
             // 
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
             this.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSave.Location = new System.Drawing.Point(984, 6);
+            this.BtnSave.Location = new System.Drawing.Point(889, 15);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(197, 61);
             this.BtnSave.TabIndex = 0;
@@ -229,13 +243,13 @@
             this.PanCent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanCent.Location = new System.Drawing.Point(0, 103);
             this.PanCent.Name = "PanCent";
-            this.PanCent.Size = new System.Drawing.Size(1184, 520);
+            this.PanCent.Size = new System.Drawing.Size(1098, 520);
             this.PanCent.TabIndex = 2;
             // 
             // ChkPrecio
             // 
             this.ChkPrecio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChkPrecio.Location = new System.Drawing.Point(1014, 89);
+            this.ChkPrecio.Location = new System.Drawing.Point(928, 78);
             this.ChkPrecio.Name = "ChkPrecio";
             this.ChkPrecio.Size = new System.Drawing.Size(158, 68);
             this.ChkPrecio.TabIndex = 2;
@@ -247,7 +261,7 @@
             this.BtnAdd.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdd.Image")));
             this.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAdd.Location = new System.Drawing.Point(1014, 17);
+            this.BtnAdd.Location = new System.Drawing.Point(925, 18);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(158, 54);
             this.BtnAdd.TabIndex = 1;
@@ -275,7 +289,7 @@
             this.Dgv1.Dock = System.Windows.Forms.DockStyle.Left;
             this.Dgv1.Location = new System.Drawing.Point(0, 0);
             this.Dgv1.Name = "Dgv1";
-            this.Dgv1.Size = new System.Drawing.Size(996, 520);
+            this.Dgv1.Size = new System.Drawing.Size(910, 520);
             this.Dgv1.TabIndex = 0;
             this.Dgv1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv1_CellEndEdit);
             this.Dgv1.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv1_RowLeave);
@@ -336,26 +350,12 @@
             this.Cad.HeaderText = "Fecha de caducidad";
             this.Cad.Name = "Cad";
             // 
-            // BtnServ
-            // 
-            this.BtnServ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnServ.Image")));
-            this.BtnServ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnServ.Location = new System.Drawing.Point(12, 6);
-            this.BtnServ.Name = "BtnServ";
-            this.BtnServ.Size = new System.Drawing.Size(186, 61);
-            this.BtnServ.TabIndex = 1;
-            this.BtnServ.Text = "Agregar Servicio";
-            this.BtnServ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnServ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnServ.UseVisualStyleBackColor = true;
-            // 
             // Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 702);
+            this.ClientSize = new System.Drawing.Size(1098, 702);
             this.Controls.Add(this.PanCent);
             this.Controls.Add(this.PanInf);
             this.Controls.Add(this.PanSup);

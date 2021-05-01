@@ -73,7 +73,7 @@
             this.PanSup.Location = new System.Drawing.Point(0, 0);
             this.PanSup.Margin = new System.Windows.Forms.Padding(4);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(1235, 357);
+            this.PanSup.Size = new System.Drawing.Size(1098, 357);
             this.PanSup.TabIndex = 0;
             // 
             // PanSder
@@ -83,7 +83,7 @@
             this.PanSder.Location = new System.Drawing.Point(613, 0);
             this.PanSder.Margin = new System.Windows.Forms.Padding(4);
             this.PanSder.Name = "PanSder";
-            this.PanSder.Size = new System.Drawing.Size(622, 357);
+            this.PanSder.Size = new System.Drawing.Size(485, 357);
             this.PanSder.TabIndex = 1;
             // 
             // GbxSemanal
@@ -99,14 +99,14 @@
             this.GbxSemanal.Margin = new System.Windows.Forms.Padding(4);
             this.GbxSemanal.Name = "GbxSemanal";
             this.GbxSemanal.Padding = new System.Windows.Forms.Padding(4);
-            this.GbxSemanal.Size = new System.Drawing.Size(622, 357);
+            this.GbxSemanal.Size = new System.Drawing.Size(485, 357);
             this.GbxSemanal.TabIndex = 0;
             this.GbxSemanal.TabStop = false;
             this.GbxSemanal.Text = "Reporte de Totales";
             // 
             // BtnCompras
             // 
-            this.BtnCompras.Location = new System.Drawing.Point(390, 120);
+            this.BtnCompras.Location = new System.Drawing.Point(268, 120);
             this.BtnCompras.Name = "BtnCompras";
             this.BtnCompras.Size = new System.Drawing.Size(136, 52);
             this.BtnCompras.TabIndex = 5;
@@ -128,7 +128,7 @@
             // DtpTf
             // 
             this.DtpTf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpTf.Location = new System.Drawing.Point(417, 63);
+            this.DtpTf.Location = new System.Drawing.Point(295, 63);
             this.DtpTf.Margin = new System.Windows.Forms.Padding(4);
             this.DtpTf.Name = "DtpTf";
             this.DtpTf.Size = new System.Drawing.Size(136, 25);
@@ -137,7 +137,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(426, 37);
+            this.label2.Location = new System.Drawing.Point(304, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 17);
@@ -240,7 +240,7 @@
             // 
             // BtnInventario
             // 
-            this.BtnInventario.Location = new System.Drawing.Point(135, 74);
+            this.BtnInventario.Location = new System.Drawing.Point(25, 69);
             this.BtnInventario.Name = "BtnInventario";
             this.BtnInventario.Size = new System.Drawing.Size(113, 54);
             this.BtnInventario.TabIndex = 0;
@@ -254,7 +254,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(610, 357);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(625, 345);
+            this.panel2.Size = new System.Drawing.Size(488, 345);
             this.panel2.TabIndex = 2;
             // 
             // GbxGanacias
@@ -269,14 +269,14 @@
             this.GbxGanacias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GbxGanacias.Location = new System.Drawing.Point(0, 0);
             this.GbxGanacias.Name = "GbxGanacias";
-            this.GbxGanacias.Size = new System.Drawing.Size(625, 345);
+            this.GbxGanacias.Size = new System.Drawing.Size(488, 345);
             this.GbxGanacias.TabIndex = 0;
             this.GbxGanacias.TabStop = false;
             this.GbxGanacias.Text = "Ganancias/Vendidos";
             // 
             // BtnVentas
             // 
-            this.BtnVentas.Location = new System.Drawing.Point(271, 139);
+            this.BtnVentas.Location = new System.Drawing.Point(217, 172);
             this.BtnVentas.Name = "BtnVentas";
             this.BtnVentas.Size = new System.Drawing.Size(91, 50);
             this.BtnVentas.TabIndex = 7;
@@ -286,7 +286,7 @@
             // 
             // BtnMasVen
             // 
-            this.BtnMasVen.Location = new System.Drawing.Point(393, 139);
+            this.BtnMasVen.Location = new System.Drawing.Point(339, 172);
             this.BtnMasVen.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMasVen.Name = "BtnMasVen";
             this.BtnMasVen.Size = new System.Drawing.Size(95, 50);
@@ -297,7 +297,7 @@
             // 
             // BtnGan
             // 
-            this.BtnGan.Location = new System.Drawing.Point(139, 139);
+            this.BtnGan.Location = new System.Drawing.Point(85, 172);
             this.BtnGan.Name = "BtnGan";
             this.BtnGan.Size = new System.Drawing.Size(94, 50);
             this.BtnGan.TabIndex = 4;
@@ -308,7 +308,7 @@
             // DtpGf
             // 
             this.DtpGf.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpGf.Location = new System.Drawing.Point(338, 83);
+            this.DtpGf.Location = new System.Drawing.Point(284, 116);
             this.DtpGf.Name = "DtpGf";
             this.DtpGf.Size = new System.Drawing.Size(150, 25);
             this.DtpGf.TabIndex = 3;
@@ -316,7 +316,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(417, 55);
+            this.label4.Location = new System.Drawing.Point(363, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 17);
             this.label4.TabIndex = 2;
@@ -325,7 +325,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 55);
+            this.label3.Location = new System.Drawing.Point(102, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 1;
@@ -334,7 +334,7 @@
             // DtpGI
             // 
             this.DtpGI.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpGI.Location = new System.Drawing.Point(129, 85);
+            this.DtpGI.Location = new System.Drawing.Point(75, 118);
             this.DtpGI.Name = "DtpGI";
             this.DtpGI.Size = new System.Drawing.Size(140, 25);
             this.DtpGI.TabIndex = 0;
@@ -344,7 +344,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1235, 702);
+            this.ClientSize = new System.Drawing.Size(1098, 702);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanSup);

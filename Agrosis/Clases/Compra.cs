@@ -87,12 +87,12 @@ namespace Agrosis.Clases
         {
             int totalp, cont;
             bool res=false;
-            totalp = datos.Length / 11;
+            totalp = datos.Length / 12;
             for (cont = 0; cont < totalp; cont++)
             {
-                string[] prods = new String[11];
+                string[] prods = new String[12];
                 int cont2;
-                for (cont2 = 0; cont2 < 11; cont2++)
+                for (cont2 = 0; cont2 < 12; cont2++)
                 {
                     prods[cont2] = datos[cont, cont2];
                 }

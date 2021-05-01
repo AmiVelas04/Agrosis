@@ -248,8 +248,8 @@
             this.DtpCad.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpCad.Location = new System.Drawing.Point(113, 455);
             this.DtpCad.Margin = new System.Windows.Forms.Padding(5);
-            this.DtpCad.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.DtpCad.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.DtpCad.MaxDate = new System.DateTime(2060, 12, 31, 0, 0, 0, 0);
+            this.DtpCad.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DtpCad.Name = "DtpCad";
             this.DtpCad.Size = new System.Drawing.Size(129, 25);
             this.DtpCad.TabIndex = 15;
@@ -429,7 +429,7 @@
             this.PanAba.Location = new System.Drawing.Point(342, 568);
             this.PanAba.Margin = new System.Windows.Forms.Padding(5);
             this.PanAba.Name = "PanAba";
-            this.PanAba.Size = new System.Drawing.Size(846, 134);
+            this.PanAba.Size = new System.Drawing.Size(756, 134);
             this.PanAba.TabIndex = 1;
             // 
             // BtnBuscServ
@@ -454,7 +454,7 @@
             // 
             this.BtnServ.Image = ((System.Drawing.Image)(resources.GetObject("BtnServ.Image")));
             this.BtnServ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnServ.Location = new System.Drawing.Point(645, 35);
+            this.BtnServ.Location = new System.Drawing.Point(554, 49);
             this.BtnServ.Name = "BtnServ";
             this.BtnServ.Size = new System.Drawing.Size(189, 56);
             this.BtnServ.TabIndex = 6;
@@ -543,7 +543,7 @@
             this.PanCent.Location = new System.Drawing.Point(342, 0);
             this.PanCent.Margin = new System.Windows.Forms.Padding(5);
             this.PanCent.Name = "PanCent";
-            this.PanCent.Size = new System.Drawing.Size(846, 568);
+            this.PanCent.Size = new System.Drawing.Size(756, 568);
             this.PanCent.TabIndex = 2;
             // 
             // DgvDatos
@@ -561,7 +561,7 @@
             this.DgvDatos.Name = "DgvDatos";
             this.DgvDatos.ReadOnly = true;
             this.DgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvDatos.Size = new System.Drawing.Size(846, 568);
+            this.DgvDatos.Size = new System.Drawing.Size(756, 568);
             this.DgvDatos.TabIndex = 0;
             this.DgvDatos.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvDatos_ColumnHeaderMouseClick);
             this.DgvDatos.ColumnSortModeChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DgvDatos_ColumnSortModeChanged);
@@ -571,7 +571,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1188, 702);
+            this.ClientSize = new System.Drawing.Size(1098, 702);
             this.Controls.Add(this.PanCent);
             this.Controls.Add(this.PanAba);
             this.Controls.Add(this.PanDer);

@@ -61,7 +61,7 @@
             this.PanLat.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanLat.Location = new System.Drawing.Point(0, 0);
             this.PanLat.Name = "PanLat";
-            this.PanLat.Size = new System.Drawing.Size(182, 768);
+            this.PanLat.Size = new System.Drawing.Size(182, 741);
             this.PanLat.TabIndex = 0;
             // 
             // BtnCompra
@@ -89,7 +89,7 @@
             this.BtnCod.ForeColor = System.Drawing.Color.White;
             this.BtnCod.Image = ((System.Drawing.Image)(resources.GetObject("BtnCod.Image")));
             this.BtnCod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCod.Location = new System.Drawing.Point(0, 664);
+            this.BtnCod.Location = new System.Drawing.Point(3, 562);
             this.BtnCod.Name = "BtnCod";
             this.BtnCod.Size = new System.Drawing.Size(131, 46);
             this.BtnCod.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.BtnCap.ForeColor = System.Drawing.Color.White;
             this.BtnCap.Image = ((System.Drawing.Image)(resources.GetObject("BtnCap.Image")));
             this.BtnCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCap.Location = new System.Drawing.Point(3, 705);
+            this.BtnCap.Location = new System.Drawing.Point(3, 670);
             this.BtnCap.Name = "BtnCap";
             this.BtnCap.Size = new System.Drawing.Size(122, 59);
             this.BtnCap.TabIndex = 5;
@@ -143,7 +143,7 @@
             this.BtnREportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnREportes.Location = new System.Drawing.Point(-9, 237);
             this.BtnREportes.Name = "BtnREportes";
-            this.BtnREportes.Size = new System.Drawing.Size(185, 44);
+            this.BtnREportes.Size = new System.Drawing.Size(176, 44);
             this.BtnREportes.TabIndex = 3;
             this.BtnREportes.Text = "Reportes";
             this.BtnREportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -160,7 +160,7 @@
             this.BtnUsu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnUsu.Location = new System.Drawing.Point(-9, 183);
             this.BtnUsu.Name = "BtnUsu";
-            this.BtnUsu.Size = new System.Drawing.Size(185, 40);
+            this.BtnUsu.Size = new System.Drawing.Size(176, 40);
             this.BtnUsu.TabIndex = 2;
             this.BtnUsu.Text = "Usuarios";
             this.BtnUsu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -177,7 +177,7 @@
             this.BtnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProductos.Location = new System.Drawing.Point(-5, 128);
             this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(181, 40);
+            this.BtnProductos.Size = new System.Drawing.Size(172, 40);
             this.BtnProductos.TabIndex = 1;
             this.BtnProductos.Text = "Productos";
             this.BtnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -194,7 +194,7 @@
             this.BtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnVentas.Location = new System.Drawing.Point(-9, 66);
             this.BtnVentas.Name = "BtnVentas";
-            this.BtnVentas.Size = new System.Drawing.Size(185, 47);
+            this.BtnVentas.Size = new System.Drawing.Size(176, 47);
             this.BtnVentas.TabIndex = 0;
             this.BtnVentas.Text = "Ventas";
             this.BtnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -210,7 +210,7 @@
             this.PanSup.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanSup.Location = new System.Drawing.Point(182, 0);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(1184, 66);
+            this.PanSup.Size = new System.Drawing.Size(1098, 66);
             this.PanSup.TabIndex = 1;
             this.PanSup.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanSup_MouseDown);
             // 
@@ -219,7 +219,7 @@
             this.BtnMin.FlatAppearance.BorderSize = 0;
             this.BtnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMin.Image = ((System.Drawing.Image)(resources.GetObject("BtnMin.Image")));
-            this.BtnMin.Location = new System.Drawing.Point(1074, 0);
+            this.BtnMin.Location = new System.Drawing.Point(989, 1);
             this.BtnMin.Name = "BtnMin";
             this.BtnMin.Size = new System.Drawing.Size(55, 66);
             this.BtnMin.TabIndex = 2;
@@ -232,7 +232,7 @@
             this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
             this.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCerrar.Location = new System.Drawing.Point(1124, 0);
+            this.BtnCerrar.Location = new System.Drawing.Point(1035, 0);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(60, 66);
             this.BtnCerrar.TabIndex = 1;
@@ -258,14 +258,14 @@
             this.PanCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanCentral.Location = new System.Drawing.Point(182, 66);
             this.PanCentral.Name = "PanCentral";
-            this.PanCentral.Size = new System.Drawing.Size(1184, 702);
+            this.PanCentral.Size = new System.Drawing.Size(1098, 675);
             this.PanCentral.TabIndex = 2;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1280, 741);
             this.Controls.Add(this.PanCentral);
             this.Controls.Add(this.PanSup);
             this.Controls.Add(this.PanLat);

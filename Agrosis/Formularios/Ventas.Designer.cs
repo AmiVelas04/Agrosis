@@ -100,7 +100,7 @@
             this.PanSup.Location = new System.Drawing.Point(0, 0);
             this.PanSup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(1184, 133);
+            this.PanSup.Size = new System.Drawing.Size(1098, 133);
             this.PanSup.TabIndex = 0;
             // 
             // CboPrecio
@@ -122,6 +122,7 @@
             this.ChkCprecio.TabIndex = 18;
             this.ChkCprecio.Text = "Precio Libre";
             this.ChkCprecio.UseVisualStyleBackColor = true;
+            this.ChkCprecio.Visible = false;
             // 
             // CboNom
             // 
@@ -140,10 +141,10 @@
             // 
             this.TxtTotal.Enabled = false;
             this.TxtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotal.Location = new System.Drawing.Point(952, 69);
+            this.TxtTotal.Location = new System.Drawing.Point(910, 59);
             this.TxtTotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtTotal.Name = "TxtTotal";
-            this.TxtTotal.Size = new System.Drawing.Size(205, 49);
+            this.TxtTotal.Size = new System.Drawing.Size(175, 49);
             this.TxtTotal.TabIndex = 16;
             this.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -151,7 +152,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(969, 28);
+            this.label7.Location = new System.Drawing.Point(911, 18);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 24);
@@ -173,7 +174,7 @@
             // BtnBorrar
             // 
             this.BtnBorrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBorrar.Location = new System.Drawing.Point(826, 14);
+            this.BtnBorrar.Location = new System.Drawing.Point(784, 49);
             this.BtnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnBorrar.Name = "BtnBorrar";
             this.BtnBorrar.Size = new System.Drawing.Size(112, 63);
@@ -307,10 +308,10 @@
             this.PanLat.Controls.Add(this.BtnCancelar);
             this.PanLat.Controls.Add(this.BtnCobrar);
             this.PanLat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanLat.Location = new System.Drawing.Point(952, 133);
+            this.PanLat.Location = new System.Drawing.Point(847, 133);
             this.PanLat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanLat.Name = "PanLat";
-            this.PanLat.Size = new System.Drawing.Size(232, 569);
+            this.PanLat.Size = new System.Drawing.Size(251, 569);
             this.PanLat.TabIndex = 1;
             // 
             // LblDesc
@@ -325,6 +326,7 @@
             // 
             // BtnImp
             // 
+            this.BtnImp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.BtnImp.Image = ((System.Drawing.Image)(resources.GetObject("BtnImp.Image")));
             this.BtnImp.Location = new System.Drawing.Point(11, 80);
             this.BtnImp.Name = "BtnImp";
@@ -335,6 +337,7 @@
             // 
             // LblCant
             // 
+            this.LblCant.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblCant.AutoSize = true;
             this.LblCant.Location = new System.Drawing.Point(47, 313);
             this.LblCant.Name = "LblCant";
@@ -344,9 +347,9 @@
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(89, 200);
+            this.label9.Location = new System.Drawing.Point(89, 199);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
@@ -355,9 +358,9 @@
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(86, 121);
+            this.label8.Location = new System.Drawing.Point(86, 120);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 20);
@@ -366,10 +369,10 @@
             // 
             // TxtCamb
             // 
-            this.TxtCamb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtCamb.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.TxtCamb.Enabled = false;
             this.TxtCamb.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCamb.Location = new System.Drawing.Point(16, 225);
+            this.TxtCamb.Location = new System.Drawing.Point(16, 224);
             this.TxtCamb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtCamb.Name = "TxtCamb";
             this.TxtCamb.Size = new System.Drawing.Size(205, 49);
@@ -378,9 +381,9 @@
             // 
             // TxtEfect
             // 
-            this.TxtEfect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtEfect.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.TxtEfect.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEfect.Location = new System.Drawing.Point(16, 146);
+            this.TxtEfect.Location = new System.Drawing.Point(16, 145);
             this.TxtEfect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtEfect.Name = "TxtEfect";
             this.TxtEfect.Size = new System.Drawing.Size(205, 49);
@@ -390,10 +393,10 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.BtnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelar.Image")));
             this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancelar.Location = new System.Drawing.Point(93, 67);
+            this.BtnCancelar.Location = new System.Drawing.Point(89, 67);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(132, 49);
@@ -405,10 +408,10 @@
             // 
             // BtnCobrar
             // 
-            this.BtnCobrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCobrar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.BtnCobrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCobrar.Image")));
             this.BtnCobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCobrar.Location = new System.Drawing.Point(8, 5);
+            this.BtnCobrar.Location = new System.Drawing.Point(4, 5);
             this.BtnCobrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnCobrar.Name = "BtnCobrar";
             this.BtnCobrar.Size = new System.Drawing.Size(217, 62);
@@ -422,10 +425,10 @@
             // 
             this.panel3.Controls.Add(this.DgvProd);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 200);
+            this.panel3.Location = new System.Drawing.Point(0, 238);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(952, 502);
+            this.panel3.Size = new System.Drawing.Size(847, 464);
             this.panel3.TabIndex = 2;
             // 
             // DgvProd
@@ -452,7 +455,7 @@
             this.DgvProd.ShowCellToolTips = false;
             this.DgvProd.ShowEditingIcon = false;
             this.DgvProd.ShowRowErrors = false;
-            this.DgvProd.Size = new System.Drawing.Size(952, 502);
+            this.DgvProd.Size = new System.Drawing.Size(847, 464);
             this.DgvProd.TabIndex = 0;
             this.DgvProd.Click += new System.EventHandler(this.DgvProd_Click);
             // 
@@ -500,7 +503,7 @@
             // 
             this.AddClie.Image = ((System.Drawing.Image)(resources.GetObject("AddClie.Image")));
             this.AddClie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddClie.Location = new System.Drawing.Point(808, 141);
+            this.AddClie.Location = new System.Drawing.Point(680, 144);
             this.AddClie.Name = "AddClie";
             this.AddClie.Size = new System.Drawing.Size(130, 51);
             this.AddClie.TabIndex = 22;
@@ -515,7 +518,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 702);
+            this.ClientSize = new System.Drawing.Size(1098, 702);
             this.Controls.Add(this.AddClie);
             this.Controls.Add(this.TxtNit);
             this.Controls.Add(this.label11);

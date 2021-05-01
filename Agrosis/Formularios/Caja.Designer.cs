@@ -80,7 +80,7 @@
             this.PanSup.Location = new System.Drawing.Point(0, 0);
             this.PanSup.Margin = new System.Windows.Forms.Padding(4);
             this.PanSup.Name = "PanSup";
-            this.PanSup.Size = new System.Drawing.Size(1235, 226);
+            this.PanSup.Size = new System.Drawing.Size(1098, 226);
             this.PanSup.TabIndex = 0;
             // 
             // BtnAbrir
@@ -261,7 +261,7 @@
             this.PanInf.Location = new System.Drawing.Point(0, 226);
             this.PanInf.Margin = new System.Windows.Forms.Padding(4);
             this.PanInf.Name = "PanInf";
-            this.PanInf.Size = new System.Drawing.Size(1235, 476);
+            this.PanInf.Size = new System.Drawing.Size(1098, 476);
             this.PanInf.TabIndex = 1;
             // 
             // DgvOpe
@@ -279,7 +279,7 @@
             this.DgvOpe.ReadOnly = true;
             this.DgvOpe.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.DgvOpe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvOpe.Size = new System.Drawing.Size(1235, 476);
+            this.DgvOpe.Size = new System.Drawing.Size(1098, 476);
             this.DgvOpe.TabIndex = 0;
             // 
             // Caja
@@ -287,7 +287,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1235, 702);
+            this.ClientSize = new System.Drawing.Size(1098, 702);
             this.Controls.Add(this.PanInf);
             this.Controls.Add(this.PanSup);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
