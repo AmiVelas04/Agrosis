@@ -120,7 +120,7 @@
             // 
             this.BtnCaja.FlatAppearance.BorderSize = 0;
             this.BtnCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCaja.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCaja.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCaja.ForeColor = System.Drawing.Color.White;
             this.BtnCaja.Image = ((System.Drawing.Image)(resources.GetObject("BtnCaja.Image")));
             this.BtnCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,7 +143,7 @@
             this.BtnREportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnREportes.Location = new System.Drawing.Point(-9, 237);
             this.BtnREportes.Name = "BtnREportes";
-            this.BtnREportes.Size = new System.Drawing.Size(176, 44);
+            this.BtnREportes.Size = new System.Drawing.Size(191, 44);
             this.BtnREportes.TabIndex = 3;
             this.BtnREportes.Text = "Reportes";
             this.BtnREportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -160,7 +160,7 @@
             this.BtnUsu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnUsu.Location = new System.Drawing.Point(-9, 183);
             this.BtnUsu.Name = "BtnUsu";
-            this.BtnUsu.Size = new System.Drawing.Size(176, 40);
+            this.BtnUsu.Size = new System.Drawing.Size(185, 40);
             this.BtnUsu.TabIndex = 2;
             this.BtnUsu.Text = "Usuarios";
             this.BtnUsu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -177,7 +177,7 @@
             this.BtnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProductos.Location = new System.Drawing.Point(-5, 128);
             this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(172, 40);
+            this.BtnProductos.Size = new System.Drawing.Size(181, 40);
             this.BtnProductos.TabIndex = 1;
             this.BtnProductos.Text = "Productos";
             this.BtnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -192,7 +192,7 @@
             this.BtnVentas.ForeColor = System.Drawing.Color.White;
             this.BtnVentas.Image = ((System.Drawing.Image)(resources.GetObject("BtnVentas.Image")));
             this.BtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnVentas.Location = new System.Drawing.Point(-9, 66);
+            this.BtnVentas.Location = new System.Drawing.Point(0, 66);
             this.BtnVentas.Name = "BtnVentas";
             this.BtnVentas.Size = new System.Drawing.Size(176, 47);
             this.BtnVentas.TabIndex = 0;

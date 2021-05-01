@@ -217,11 +217,12 @@ namespace Agrosis.Formularios
             {
                 MessageBox.Show("No existen Productos");
             }
-            else if (decimal.Parse(TxtCamb.Text) < 0)
+                       else if (TxtEfect.Text == "")
+            { MessageBox.Show("No se ha ingresado el monto del efectivo");
+                TxtEfect.Text = "0";
+            }
+            else if (decimal.Parse(TxtCamb.Text) < 0 || TxtCamb.Text == "")
             { MessageBox.Show("El monto de efectivo es incorrecto"); }
-            else if (TxtEfect.Text == "")
-            { MessageBox.Show("No se ha ingresado el monto del efectivo"); }
-
             else
             {
                 PrepProd();

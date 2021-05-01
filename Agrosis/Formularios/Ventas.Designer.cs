@@ -333,6 +333,7 @@
             this.BtnImp.Size = new System.Drawing.Size(43, 36);
             this.BtnImp.TabIndex = 7;
             this.BtnImp.UseVisualStyleBackColor = true;
+            this.BtnImp.Visible = false;
             this.BtnImp.Click += new System.EventHandler(this.BtnImp_Click);
             // 
             // LblCant

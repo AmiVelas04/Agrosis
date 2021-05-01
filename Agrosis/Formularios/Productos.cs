@@ -202,7 +202,7 @@ namespace Agrosis.Formularios
                 {
                     //cambio de color para los que sean caducados
                     DgvDatos.Rows[cont].DefaultCellStyle.ForeColor = Color.White;
-                    DgvDatos.Rows[cont].DefaultCellStyle.BackColor = Color.Red;
+                    DgvDatos.Rows[cont].DefaultCellStyle.BackColor = Color.OrangeRed;
                 }
             }
 
@@ -221,7 +221,7 @@ namespace Agrosis.Formularios
                 {
                     //cambio de color para los que sean caducados
                     DgvDatos.Rows[cont].DefaultCellStyle.ForeColor = Color.White;
-                    DgvDatos.Rows[cont].DefaultCellStyle.BackColor = Color.Cyan;
+                    DgvDatos.Rows[cont].DefaultCellStyle.BackColor = Color.DarkCyan;
                 }
             }
         }
@@ -280,6 +280,75 @@ namespace Agrosis.Formularios
             TxtPrecio_V1.Text = "0";
             TxtPrecio_V2.Text = "0";
             Nud.Value = 0;
+        }
+
+        private void TxtPercM1_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtCosto.Text != "")
+            {
+                decimal costo, porcent=0, precio=0;
+                bool numerico;
+                costo = decimal.Parse(TxtCosto.Text);
+                numerico = decimal.TryParse(TxtPercM1.Text,out  porcent);
+                if (numerico)
+                {
+                    precio = costo + (costo * porcent / 100);
+                    
+                }
+
+                TxtPrecio_M1.Text = precio.ToString("###,###.##");
+                 }
+        }
+
+        private void TxtPercM2_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtCosto.Text != "")
+            {
+                decimal costo, porcent = 0, precio = 0;
+                bool numerico;
+                costo = decimal.Parse(TxtCosto.Text);
+                numerico = decimal.TryParse(TxtPercM2.Text, out porcent);
+                if (numerico)
+                {
+                    precio = costo + (costo * porcent / 100);
+
+                }
+
+                TxtPrecio_M2.Text = precio.ToString("###,###.##");
+            }
+        }
+
+        private void TxtPercV1_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtCosto.Text != "")
+            {
+                decimal costo, porcent = 0, precio = 0;
+                bool numerico;
+                costo = decimal.Parse(TxtCosto.Text);
+                numerico = decimal.TryParse(TxtPercV1.Text, out porcent);
+                if (numerico)
+                {
+                    precio = costo + (costo * porcent / 100);
+                }
+                TxtPrecio_V1.Text = precio.ToString("###,###.##");
+            }
+        }
+
+        private void TxtPercV2_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtCosto.Text != "")
+            {
+                decimal costo, porcent = 0, precio = 0;
+                bool numerico;
+                costo = decimal.Parse(TxtCosto.Text);
+                numerico = decimal.TryParse(TxtPercV2.Text, out porcent);
+                if (numerico)
+                {
+                    precio = costo + (costo * porcent / 100);
+                }
+                TxtPrecio_V2.Text = precio.ToString("###,###.##");
+            }
+
         }
     }
 }
