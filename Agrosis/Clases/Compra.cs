@@ -136,7 +136,7 @@ namespace Agrosis.Clases
                     decimal tot=0;
                     tot += decimal.Parse(prods[cont, 9]) * decimal.Parse(prods[cont,4]);
                     ConsCompDet = "insert into compra_det(id_det_comp,id_comp,id_prod,costo,cantidad,total) values(" +
-                        iddet + "," + idc + ","+ prods[cont, 0] + "," + prods[cont, 4] + ",'" + prods[cont, 9] + "'," + tot + ")";
+                        iddet + "," + idc + ",'"+ prods[cont, 0] + "'," + prods[cont, 4] + ",'" + prods[cont, 9] + "'," + tot + ")";
                     if (!consulta_gen(ConsCompDet))
                     {
                         MessageBox.Show("Error al ingresar el regsitro de detalle de compra");

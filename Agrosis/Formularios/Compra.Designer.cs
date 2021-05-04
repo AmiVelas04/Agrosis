@@ -73,6 +73,7 @@
             this.Precio5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnBorrar = new System.Windows.Forms.Button();
             this.PanSup.SuspendLayout();
             this.PanInf.SuspendLayout();
             this.PanCent.SuspendLayout();
@@ -251,6 +252,7 @@
             // 
             // PanCent
             // 
+            this.PanCent.Controls.Add(this.BtnBorrar);
             this.PanCent.Controls.Add(this.ChkPrecio);
             this.PanCent.Controls.Add(this.BtnAdd);
             this.PanCent.Controls.Add(this.Dgv1);
@@ -263,12 +265,13 @@
             // ChkPrecio
             // 
             this.ChkPrecio.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChkPrecio.Location = new System.Drawing.Point(928, 78);
+            this.ChkPrecio.Location = new System.Drawing.Point(928, 166);
             this.ChkPrecio.Name = "ChkPrecio";
             this.ChkPrecio.Size = new System.Drawing.Size(158, 68);
             this.ChkPrecio.TabIndex = 2;
             this.ChkPrecio.Text = "Modificar producto";
             this.ChkPrecio.UseVisualStyleBackColor = true;
+            this.ChkPrecio.Visible = false;
             // 
             // BtnAdd
             // 
@@ -347,7 +350,6 @@
             this.PorcentM1.DefaultCellStyle = dataGridViewCellStyle12;
             this.PorcentM1.HeaderText = "% Mayorista 1";
             this.PorcentM1.Name = "PorcentM1";
-            this.PorcentM1.Width = 109;
             // 
             // Precio2
             // 
@@ -411,6 +413,20 @@
             this.Cad.HeaderText = "Fecha de caducidad";
             this.Cad.Name = "Cad";
             // 
+            // BtnBorrar
+            // 
+            this.BtnBorrar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBorrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBorrar.Image")));
+            this.BtnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnBorrar.Location = new System.Drawing.Point(928, 88);
+            this.BtnBorrar.Name = "BtnBorrar";
+            this.BtnBorrar.Size = new System.Drawing.Size(158, 54);
+            this.BtnBorrar.TabIndex = 3;
+            this.BtnBorrar.Text = "Añadir";
+            this.BtnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBorrar.UseVisualStyleBackColor = true;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
+            // 
             // Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -470,5 +486,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cad;
+        private System.Windows.Forms.Button BtnBorrar;
     }
 }

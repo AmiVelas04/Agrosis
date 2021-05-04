@@ -71,6 +71,7 @@ namespace Agrosis.Formularios
                 BtnUsu.Visible = false;
                 BtnREportes.Visible = false;
                 BtnCap.Visible = false;
+                BtnCompra.Visible = false;
             }
 
             if (id.ToString() == "5" || id.ToString()=="4")

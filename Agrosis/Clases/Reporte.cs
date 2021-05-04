@@ -196,7 +196,7 @@ namespace Agrosis.Clases
                 decimal total;
                 Deta.compra = Int32.Parse(datos.Rows[cont][0].ToString());
                 Deta.doc= datos.Rows[cont][1].ToString();
-                Deta.Numdoc= Int32.Parse(datos.Rows[cont][2].ToString());
+                Deta.Numdoc= (datos.Rows[cont][2].ToString());
                 Deta.detalle= Int32.Parse(datos.Rows[cont][3].ToString());
                 Deta.cod = datos.Rows[cont][4].ToString(); 
                 Deta.prod= datos.Rows[cont][5].ToString() + " - "+ datos.Rows[cont][6].ToString() +" - " +datos.Rows[cont][7].ToString(); ;

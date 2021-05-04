@@ -10,7 +10,7 @@ namespace Agrosis.Reportes
     {
         public int compra { get; set; }
         public string doc { get; set; }
-        public int Numdoc { get; set; }
+        public string Numdoc { get; set; }
         public int detalle { get; set; }
         public string cod { get; set; }
          public string prod { get; set; }

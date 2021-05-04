@@ -120,7 +120,7 @@ namespace Agrosis.Formularios
                     datos[cont, 0] = Dgv1.Rows[cont].Cells["Cod"].Value!=null ? Dgv1.Rows[cont].Cells["Cod"].Value.ToString() : "";
                     datos[cont, 1] = Dgv1.Rows[cont].Cells["Nom"].Value!=null ? Dgv1.Rows[cont].Cells["Nom"].Value.ToString():"";
                     datos[cont, 2] = Dgv1.Rows[cont].Cells["Desc"].Value !=null ? Dgv1.Rows[cont].Cells["Desc"].Value.ToString():"";
-                    datos[cont, 3] = Dgv1.Rows[cont].Cells["Marc"].Value !=null? Dgv1.Rows[cont].Cells["Desc"].Value.ToString():"";
+                    datos[cont, 3] = Dgv1.Rows[cont].Cells["Marc"].Value !=null? Dgv1.Rows[cont].Cells["Marc"].Value.ToString():"";
                     datos[cont, 4] = Dgv1.Rows[cont].Cells["Precio1"].Value !=null ? Dgv1.Rows[cont].Cells["Precio1"].Value.ToString():"0";
                     datos[cont, 5] = Dgv1.Rows[cont].Cells["Precio2"].Value !=null ? Dgv1.Rows[cont].Cells["Precio2"].Value.ToString():"0";
                     datos[cont, 6] = Dgv1.Rows[cont].Cells["Precio3"].Value !=null ? Dgv1.Rows[cont].Cells["Precio3"].Value.ToString():"0";
@@ -142,7 +142,7 @@ namespace Agrosis.Formularios
                 numdoc = TxtNumDoc.Text;
                 if (comp.ingreso_prod_compra(datos,cajero,prove,fecha,docu,numdoc))
                 {
-                    MessageBox.Show("Productos ingresdo con exito");
+                    MessageBox.Show("Productos ingresados con exito","Ingreso",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -184,7 +184,7 @@ namespace Agrosis.Formularios
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Dgv1.Rows.Add(0,"","","",0,0,0,0,0,0,"");
+            Dgv1.Rows.Add(0,"","","",0,0,0,0,0,0,0,0,0,0,"31/01/2030");
         }
 
         private void btnAddProv_Click(object sender, EventArgs e)
@@ -243,6 +243,22 @@ namespace Agrosis.Formularios
 
             }
             
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+            borrarfila();
+
+        }
+
+        private void borrarfila()
+        {
+            if (Dgv1.Rows.Count>=1)
+            {
+                int indice;
+                indice= Dgv1.CurrentRow.Index;
+                Dgv1.Rows.RemoveAt(indice);
+            }
         }
     }
 }

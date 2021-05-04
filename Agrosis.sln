@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agrosis", "Agrosis\Agrosis.csproj", "{7249203D-59F1-45B5-AB8E-0EC0E889071D}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstalaAgro", "InstalaAgro\InstalaAgro.vdproj", "{D7589958-E651-40E8-9816-10B656C4D2E7}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaPet", "InstaPet\InstaPet.vdproj", "{8C301722-95E5-4694-80AB-E02B3D3776C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{7249203D-59F1-45B5-AB8E-0EC0E889071D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7249203D-59F1-45B5-AB8E-0EC0E889071D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7249203D-59F1-45B5-AB8E-0EC0E889071D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7589958-E651-40E8-9816-10B656C4D2E7}.Debug|Any CPU.ActiveCfg = Debug
-		{D7589958-E651-40E8-9816-10B656C4D2E7}.Release|Any CPU.ActiveCfg = Release
+		{8C301722-95E5-4694-80AB-E02B3D3776C5}.Debug|Any CPU.ActiveCfg = Debug
+		{8C301722-95E5-4694-80AB-E02B3D3776C5}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
