@@ -101,14 +101,29 @@ namespace Agrosis.Formularios
             }
             else
             {
-                listarprods();
-                limpiar();
+                if (Dgv1.Rows.Count > 0)
+                {
+                    /*if (!revisarfechas())
+                    { return; }
+                    else {*/
+                        listarprods();
+                        limpiar(); }
+                    
+                //}
+                else
+                {
+                    MessageBox.Show("No se ha ingresado en número del documento", "Sin número", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+                
             }
             
         }
 
         private void listarprods()
         {
+            
+            
             int cantP;
             cantP = Dgv1.Rows.Count;
             if (cantP >= 0)
@@ -251,6 +266,24 @@ namespace Agrosis.Formularios
 
         }
 
+
+        private bool revisarfechas()
+        {
+            DateTime fecha;
+            int cant, cont;
+            cant = Dgv1.Rows.Count;
+          /*  for (cont = 0; cont <= cant; cont++)
+            {
+                if (!DateTime.TryParseExact(Dgv1.Rows[cont].Cells["Cad"].Value.ToString(),"yyyy/MM/dd", null,System.Globalization.CultureInfo.InvariantCulture,out fecha))
+                { }
+
+            }*/
+            DateTime fecha;
+            
+
+            MessageBox.Show("El formato de las fechas es incorrecto, porfavor verifiquelas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return false;
+        }
         private void borrarfila()
         {
             if (Dgv1.Rows.Count>=1)
